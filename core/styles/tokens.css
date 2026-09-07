@@ -1,0 +1,28 @@
+:root {
+  /* Surfaces */
+  --cropx-cream: #f7f4ee;
+  --cropx-white: #ffffff;
+  --cropx-ink: #0c1f14;
+  --cropx-border-warm: #e8e4dc;
+
+  /* Typography */
+  --cropx-font-body: 'DM Sans', system-ui, sans-serif;
+  --cropx-font-heading: 'DM Sans', system-ui, sans-serif;
+
+  /* Layout */
+  --cropx-content-max: 1200px;
+  --cropx-reading-max: 680px;
+  --cropx-section-py: clamp(3.5rem, 6vw, 5.5rem);
+  --cropx-section-py-sm: clamp(2.5rem, 4vw, 3.5rem);
+
+  /* Type scale */
+  --cropx-text-display: clamp(2.25rem, 4.5vw, 3.25rem);
+  --cropx-text-h2: clamp(1.75rem, 3vw, 2.25rem);
+  --cropx-text-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --cropx-text-body-lg: 1.125rem;
+  --cropx-text-body: 1rem;
+  --cropx-text-small: 0.875rem;
+
+  /* Stat numerals */
+  --cropx-stat-size: clamp(2rem, 4vw, 2.75rem);
+}

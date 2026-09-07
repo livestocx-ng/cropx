@@ -1,0 +1,19 @@
+node_modules
+.next
+out
+build
+.DS_Store
+
+*.pem
+.env*.local
+.vercel
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# Full-resolution photo originals. Build inputs only: the site serves the
+# compressed files in public/images/cropx/. Regenerate with
+# `npm run images:fetch`, then `npm run images:build`.
+public/images/cropx/raw/
+
+.idea
+storybook-static
