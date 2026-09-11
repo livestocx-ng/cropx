@@ -31,7 +31,7 @@ export function ProcessTimeline({ steps, title, intro }: ProcessTimelineProps) {
       style={{ backgroundColor: 'var(--cropx-cream)' }}
     >
       <Container size="xl" px={20}>
-        <Stack gap={{ base: 56, md: 72 }}>
+        <Stack gap={72}>
           {(title || intro) && (
             <SectionHeader title={title ?? 'How it works'} description={intro} />
           )}
@@ -45,7 +45,7 @@ export function ProcessTimeline({ steps, title, intro }: ProcessTimelineProps) {
 
               const textCol = (
                 <GridCol span={{ base: 12, md: 5 }}>
-                  <Stack gap="md" maw={440} justify="center" h="100%" py={{ base: 0, md: 8 }}>
+                  <Stack gap="md" maw={440} justify="center" h="100%" py={8}>
                     <Text
                       size="xs"
                       fw={700}
