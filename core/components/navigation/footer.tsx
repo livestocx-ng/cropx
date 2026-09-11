@@ -13,6 +13,7 @@ import {
   ThemeIcon,
   Title,
 } from '@mantine/core';
+import { brand } from '@/core/content/brand';
 import { contactChannels } from '@/core/utilities';
 
 export function Footer() {
@@ -34,25 +35,31 @@ export function Footer() {
         `}
       </style>
 
-      <Box py={{ base: 48, md: 56 }}>
+      <Box py={{ base: 48, md: 64 }}>
         <Container size="xl" px={20}>
           <Grid gutter={{ base: 'xl', md: 48 }}>
-            <GridCol span={{ base: 12, md: 5 }}>
+            <GridCol span={{ base: 12, md: 4 }}>
               <Stack gap="lg">
                 <Flex align="center" gap="sm">
                   <ThemeIcon size={36} radius="md" variant="light" color="accent">
                     <IconSeeding size={20} />
                   </ThemeIcon>
-                  <Title order={3} c="white" size="h4">
+                  <Title
+                    order={3}
+                    c="white"
+                    style={{ fontFamily: 'var(--cropx-font-heading)', letterSpacing: '-0.02em' }}
+                  >
                     CropX
                   </Title>
                 </Flex>
-                <Text size="sm" c="gray.4" style={{ maxWidth: 400, lineHeight: 1.65 }}>
-                  Safeguarding African food security by matching farms with the drought and
-                  climate-resilient crop varieties that can still yield in a warming environment.
+                <Text size="sm" c="gray.4" style={{ maxWidth: 340, lineHeight: 1.7 }}>
+                  {brand.missionShort}
+                </Text>
+                <Text size="sm" c="gray.5" style={{ maxWidth: 340, lineHeight: 1.65 }}>
+                  Climate-fit seed choice for African farms — so more harvests still yield.
                 </Text>
 
-                <Group gap="lg" wrap="wrap">
+                <Stack gap="sm">
                   <Flex gap="xs" align="center">
                     <IconMail size={16} color="#adb5bd" />
                     <Anchor href={`mailto:${contactChannels.email}`} className="footer-link">
@@ -65,12 +72,12 @@ export function Footer() {
                       {contactChannels.phone}
                     </Anchor>
                   </Flex>
-                </Group>
+                </Stack>
               </Stack>
             </GridCol>
 
-            <GridCol span={{ base: 12, md: 7 }}>
-              <Grid gutter="xl">
+            <GridCol span={{ base: 12, md: 8 }}>
+              <Grid gutter={{ base: 'xl', md: 32 }}>
                 <GridCol span={{ base: 6, sm: 4 }}>
                   <FooterColumn title="Platform">
                     <Link href="/seed-advisor" className="footer-link">
@@ -116,36 +123,53 @@ export function Footer() {
                   </FooterColumn>
                 </GridCol>
               </Grid>
-            </GridCol>
-          </Grid>
 
-          <Grid mt={40} gutter="md">
-            {contactChannels.offices.map((office) => (
-              <GridCol key={office.label} span={{ base: 12, sm: 6 }}>
-                <Flex gap="xs" align="flex-start">
-                  <IconMapPin size={16} color="#eec95e" style={{ flexShrink: 0, marginTop: 2 }} />
-                  <Stack gap={4}>
-                    <Text size="xs" fw={700} c="gray.3" tt="uppercase" style={{ letterSpacing: '0.06em' }}>
-                      {office.label}
-                    </Text>
-                    {office.lines.map((line) => (
-                      <Text key={line} size="sm" c="gray.4" style={{ lineHeight: 1.5 }}>
-                        {line}
-                      </Text>
-                    ))}
-                  </Stack>
-                </Flex>
-              </GridCol>
-            ))}
+              <Box mt={40}>
+                <Text
+                  size="xs"
+                  fw={700}
+                  c="gray.3"
+                  tt="uppercase"
+                  mb="md"
+                  style={{ letterSpacing: '0.08em' }}
+                >
+                  Locations
+                </Text>
+                <Grid gutter="md">
+                  {contactChannels.offices.map((office) => (
+                    <GridCol key={office.label} span={{ base: 12, sm: 6 }}>
+                      <Flex gap="xs" align="flex-start">
+                        <IconMapPin size={16} color="#eec95e" style={{ flexShrink: 0, marginTop: 2 }} />
+                        <Stack gap={4}>
+                          <Text size="xs" fw={700} c="gray.3">
+                            {office.label}
+                          </Text>
+                          {office.lines.map((line) => (
+                            <Text key={line} size="sm" c="gray.4" style={{ lineHeight: 1.5 }}>
+                              {line}
+                            </Text>
+                          ))}
+                        </Stack>
+                      </Flex>
+                    </GridCol>
+                  ))}
+                </Grid>
+              </Box>
+            </GridCol>
           </Grid>
         </Container>
       </Box>
 
       <Box py="md" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
         <Container size="xl" px={20}>
-          <Text size="xs" ta="center" c="gray.5">
-            CropX &copy; {new Date().getFullYear()}. All rights reserved.
-          </Text>
+          <Group justify="space-between" wrap="wrap" gap="sm">
+            <Text size="xs" c="gray.5">
+              CropX &copy; {new Date().getFullYear()}. All rights reserved.
+            </Text>
+            <Text size="xs" c="gray.6">
+              Climate-resilient seed choice for African food security
+            </Text>
+          </Group>
         </Container>
       </Box>
     </Box>
@@ -155,13 +179,7 @@ export function Footer() {
 function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <Stack gap="sm">
-      <Text
-        size="xs"
-        fw={700}
-        c="gray.3"
-        tt="uppercase"
-        style={{ letterSpacing: '0.08em' }}
-      >
+      <Text size="xs" fw={700} c="gray.3" tt="uppercase" style={{ letterSpacing: '0.08em' }}>
         {title}
       </Text>
       {children}

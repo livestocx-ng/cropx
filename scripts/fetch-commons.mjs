@@ -21,8 +21,8 @@ const USER_AGENT = 'CropX-site-build/1.0 (agricultural advisory site; contact vi
 /** Commons-specific searches, chosen to favour African agriculture. */
 const QUERIES = {
   'home-hero-dry-field': ['drought farmland africa', 'dry season savanna farm', 'arid farmland'],
-  'home-before-drought-maize': ['drought maize', 'dry maize field'],
-  'home-after-healthy-maize': ['maize field nigeria', 'maize farm ghana', 'maize plantation africa'],
+  'home-before-drought-maize': ['failed maize crops Ghana', 'drought stressed maize field', 'dry maize field'],
+  'home-after-healthy-maize': ['green corn rows field', 'healthy maize field', 'maize plantation farm'],
   'home-essay-farmer': ['farmer nigeria', 'farmer ghana field', 'agriculture nigeria'],
   'home-essay-soil': ['soil sampling', 'soil profile agriculture'],
   'home-essay-seed': ['maize seed', 'sorghum seed', 'cereal grain'],

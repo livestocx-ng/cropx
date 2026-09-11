@@ -51,7 +51,7 @@ const SLOTS = {
   },
   'home-essay-farmer': {
     role: 'FULL_BLEED',
-    alt: 'A smallholder farmer standing among crops on their own land',
+    alt: 'A farmer sitting beside a maize field with a hoe resting on his shoulder',
   },
   'home-essay-soil': {
     role: 'INLINE',
@@ -143,7 +143,7 @@ const SLOTS = {
   // ---------------------------------------------------- agronomist network
   'agronomist-hero-extension': {
     role: 'FULL_BLEED',
-    alt: 'An extension officer explaining crop management to a group of farmers',
+    alt: 'Farmers planting together in a field, with one woman pointing while carrying a child on her back',
   },
   'agronomist-training': {
     role: 'FULL_BLEED',

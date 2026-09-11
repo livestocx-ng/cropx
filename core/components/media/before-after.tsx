@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useRef, useState } from 'react';
-import { Badge, Box, Grid, GridCol, Stack, Text, Title, rem } from '@mantine/core';
+import { Box, Grid, GridCol, Stack, Text, Title } from '@mantine/core';
 import { useReducedMotion } from '@mantine/hooks';
 import { ImageSlot } from '@/core/content/image-manifest';
 import { ManagedImage } from './managed-image';
@@ -16,11 +16,7 @@ interface BeforeAfterProps {
 }
 
 /**
- * Paired photographs with a draggable divider.
- *
- * Falls back to a plain side-by-side pair when the visitor prefers reduced
- * motion, since the drag interaction is the whole point of the slider and a
- * static comparison communicates the same thing.
+ * Cinematic compare slider — full-bleed crop, minimal chrome.
  */
 export function BeforeAfter({
   beforeSlot,
@@ -48,22 +44,30 @@ export function BeforeAfter({
 
   if (reduceMotion) {
     return (
-      <Stack gap="lg">
+      <Stack gap={28}>
         {title && (
-          <Title order={2} style={{ fontSize: rem(30), fontWeight: 700 }}>
+          <Title
+            order={2}
+            style={{
+              fontFamily: 'var(--cropx-font-heading)',
+              fontSize: 'var(--cropx-text-h2)',
+              letterSpacing: '-0.025em',
+              lineHeight: 1.15,
+            }}
+          >
             {title}
           </Title>
         )}
-        <Grid gutter="md">
+        <Grid gutter={{ base: 16, md: 20 }}>
           <GridCol span={{ base: 12, sm: 6 }}>
-            <StaticPane slot={beforeSlot} label={beforeLabel} tone="dark" />
+            <StaticPane slot={beforeSlot} label={beforeLabel} />
           </GridCol>
           <GridCol span={{ base: 12, sm: 6 }}>
-            <StaticPane slot={afterSlot} label={afterLabel} tone="green" />
+            <StaticPane slot={afterSlot} label={afterLabel} accent />
           </GridCol>
         </Grid>
         {caption && (
-          <Text size="sm" c="dimmed" style={{ lineHeight: 1.7 }}>
+          <Text size="sm" style={{ lineHeight: 1.7, color: 'var(--cropx-muted)', maxWidth: 640 }}>
             {caption}
           </Text>
         )}
@@ -72,9 +76,17 @@ export function BeforeAfter({
   }
 
   return (
-    <Stack gap="lg">
+    <Stack gap={28}>
       {title && (
-        <Title order={2} style={{ fontSize: rem(30), fontWeight: 700, lineHeight: 1.2 }}>
+        <Title
+          order={2}
+          style={{
+            fontFamily: 'var(--cropx-font-heading)',
+            fontSize: 'var(--cropx-text-h2)',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.15,
+          }}
+        >
           {title}
         </Title>
       )}
@@ -86,12 +98,13 @@ export function BeforeAfter({
         style={{
           position: 'relative',
           width: '100%',
-          aspectRatio: '16 / 9',
+          aspectRatio: '21 / 10',
           overflow: 'hidden',
-          borderRadius: rem(14),
+          borderRadius: 8,
           cursor: dragging ? 'grabbing' : 'ew-resize',
           userSelect: 'none',
           touchAction: 'pan-y',
+          backgroundColor: 'var(--cropx-cream)',
         }}
         onPointerDown={(event) => {
           setDragging(true);
@@ -125,8 +138,8 @@ export function BeforeAfter({
             bottom: 0,
             left: `${position}%`,
             width: 2,
-            backgroundColor: 'white',
-            boxShadow: '0 0 12px rgba(0,0,0,0.45)',
+            backgroundColor: 'rgba(255,255,255,0.95)',
+            boxShadow: '0 0 0 1px rgba(10, 31, 18, 0.12)',
           }}
         >
           <Box
@@ -135,36 +148,26 @@ export function BeforeAfter({
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              width: 40,
-              height: 40,
+              width: 44,
+              height: 44,
               borderRadius: '50%',
-              backgroundColor: 'white',
+              backgroundColor: 'var(--cropx-white)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 2px 10px rgba(0,0,0,0.35)',
-              fontSize: 14,
-              color: '#06160e',
+              boxShadow: '0 8px 24px rgba(10, 31, 18, 0.18)',
+              fontSize: 13,
+              fontWeight: 600,
+              color: 'var(--cropx-ink)',
+              letterSpacing: '-0.02em',
             }}
           >
             ↔
           </Box>
         </Box>
 
-        <Badge
-          color="dark"
-          variant="filled"
-          style={{ position: 'absolute', top: 12, left: 12, opacity: 0.9 }}
-        >
-          {beforeLabel}
-        </Badge>
-        <Badge
-          color="primary"
-          variant="filled"
-          style={{ position: 'absolute', top: 12, right: 12, opacity: 0.95 }}
-        >
-          {afterLabel}
-        </Badge>
+        <CompareLabel side="left">{beforeLabel}</CompareLabel>
+        <CompareLabel side="right">{afterLabel}</CompareLabel>
       </Box>
 
       <Box>
@@ -175,12 +178,12 @@ export function BeforeAfter({
           value={Math.round(position)}
           onChange={(event) => setPosition(Number(event.currentTarget.value))}
           aria-label={`Reveal more of ${beforeLabel} or ${afterLabel}`}
-          style={{ width: '100%', accentColor: '#006838' }}
+          style={{ width: '100%', accentColor: '#006838', height: 4 }}
         />
       </Box>
 
       {caption && (
-        <Text size="sm" c="dimmed" style={{ lineHeight: 1.7 }}>
+        <Text size="sm" style={{ lineHeight: 1.7, color: 'var(--cropx-muted)', maxWidth: 640 }}>
           {caption}
         </Text>
       )}
@@ -188,23 +191,53 @@ export function BeforeAfter({
   );
 }
 
+function CompareLabel({ side, children }: { side: 'left' | 'right'; children: string }) {
+  return (
+    <Text
+      component="span"
+      size="xs"
+      fw={600}
+      style={{
+        position: 'absolute',
+        top: 16,
+        [side]: 16,
+        padding: '6px 10px',
+        borderRadius: 6,
+        backgroundColor: 'rgba(10, 31, 18, 0.72)',
+        color: 'white',
+        letterSpacing: '-0.01em',
+        backdropFilter: 'blur(6px)',
+      }}
+    >
+      {children}
+    </Text>
+  );
+}
+
 function StaticPane({
   slot,
   label,
-  tone,
+  accent = false,
 }: {
   slot: ImageSlot;
   label: string;
-  tone: 'dark' | 'green';
+  accent?: boolean;
 }) {
   return (
-    <Stack gap="xs">
-      <Box style={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden', borderRadius: rem(12) }}>
+    <Stack gap="sm">
+      <Box
+        style={{
+          position: 'relative',
+          aspectRatio: '4 / 3',
+          overflow: 'hidden',
+          borderRadius: 8,
+        }}
+      >
         <ManagedImage slot={slot} fill sizes="(max-width: 768px) 100vw, 50vw" showCredit />
       </Box>
-      <Badge color={tone === 'green' ? 'primary' : 'dark'} variant="light" radius="sm">
+      <Text size="sm" fw={600} c={accent ? 'primary.7' : 'dark.6'}>
         {label}
-      </Badge>
+      </Text>
     </Stack>
   );
 }

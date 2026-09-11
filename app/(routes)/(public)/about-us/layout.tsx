@@ -1,6 +1,7 @@
 import { buildMetadata } from '@/core/utils/metadata';
+import { brand } from '@/core/content/brand';
 
-export const metadata = buildMetadata('About', 'Why CropX exists: safeguarding African food security by getting climate-resilient seed to the farmers who need it.');
+export const metadata = buildMetadata('About', brand.missionFull);
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

@@ -1,6 +1,7 @@
 import {
   Alert,
   Box,
+  Button,
   Container,
   Stack,
   Table,
@@ -11,14 +12,18 @@ import {
   TableTr,
   Text,
 } from '@mantine/core';
-import { IconInfoCircle } from '@tabler/icons-react';
+import Link from 'next/link';
+import { IconArrowRight, IconInfoCircle } from '@tabler/icons-react';
 import { ManagedImage, PhotoEssay } from '@/core/components/media';
+import { BenefitFeatures } from '@/core/components/sections/benefit-features';
+import { CrisisStatBoard } from '@/core/components/sections/crisis-stat-board';
 import { CtaBand } from '@/core/components/sections/cta-band';
 import { HeroSplit } from '@/core/components/sections/hero-split';
-import { PillarGrid } from '@/core/components/sections/pillar-grid';
 import { ProcessTimeline } from '@/core/components/sections/process-timeline';
 import { SectionHeader } from '@/core/components/sections/section-header';
+import { brand } from '@/core/content/brand';
 import { zoneOrder, zoneProfiles } from '@/core/content/agro-zones';
+import { crisisStats } from '@/core/utilities';
 
 const RISK_TEXT: Record<string, string> = {
   VERY_HIGH: 'Very high',
@@ -27,18 +32,21 @@ const RISK_TEXT: Record<string, string> = {
   LOW: 'Low',
 };
 
-const CLIMATE_PILLARS = [
+const CLIMATE_BENEFITS = [
   {
     title: 'Zone-level rainfall ranges',
-    body: 'Each agro-ecological zone carries a rainfall band and a reliable growing-season length derived from Nigerian agricultural research classifications.',
+    body: 'Each agro-ecological zone carries a rainfall band and a reliable growing-season length — the climate facts every food-security planting decision rests on.',
+    benefit: 'Planting advice starts from climate, not habit',
   },
   {
     title: 'Drought risk profiles',
     body: 'The Sahel faces very high drought risk; the humid south faces low risk but different constraints. Recommendations weight traits accordingly.',
+    benefit: 'Resilience weighted by local drought risk',
   },
   {
     title: 'Stated assumptions',
-    body: 'Every recommendation can be traced back to the zone assumptions behind it. Local variation within a zone is substantial and worth checking.',
+    body: 'Every seed recommendation can be traced back to zone assumptions. Local variation within a zone is substantial and worth checking on the ground.',
+    benefit: 'Transparent climate assumptions',
   },
 ];
 
@@ -46,7 +54,7 @@ const CLIMATE_STEPS = [
   {
     label: 'Shift one',
     heading: 'The season starts later and ends earlier',
-    body: 'A shorter reliable window means varieties that used to finish comfortably now run out of water during grain fill. The same seed, in the same place, is now a riskier choice than it was.',
+    body: 'A shorter reliable window means varieties that used to finish comfortably now run out of water during grain fill. The same seed, in the same place, is now a riskier choice for food security than it was.',
     slot: 'climate-rain-clouds' as const,
   },
   {
@@ -64,7 +72,7 @@ const CLIMATE_STEPS = [
   {
     label: 'Response',
     heading: 'Match duration to the season you now have',
-    body: 'Where irrigation is not an option, the practical response is choosing varieties whose maturity fits the window that actually exists, and accepting a lower ceiling in exchange for reliability.',
+    body: 'Where irrigation is not an option, the practical response is choosing varieties whose maturity fits the window that actually exists — accepting a lower ceiling in exchange for a harvest you can count on.',
     slot: 'climate-irrigation' as const,
   },
 ];
@@ -74,13 +82,32 @@ export default function ClimateInsightsPage() {
     <Box>
       <HeroSplit
         asH1
+        eyebrow="Climate Insights"
         title="You cannot choose seed without knowing the climate you are choosing it for"
-        description="Rainfall totals, season length, and drought risk differ enormously across Nigeria. These are the assumptions every CropX recommendation rests on, stated openly."
+        description="Rainfall totals, season length, and drought risk differ enormously across Nigeria. These are the assumptions every CropX recommendation — and every climate-fit planting decision — rests on."
         visual={
-          <Box style={{ position: 'relative', aspectRatio: '4 / 3', borderRadius: 12, overflow: 'hidden' }}>
+          <Box style={{ position: 'relative', aspectRatio: '5 / 4' }}>
             <ManagedImage slot="climate-hero-drought" fill sizes="(max-width: 768px) 100vw, 50vw" showCredit />
           </Box>
         }
+      >
+        <Button
+          component={Link}
+          href="/seed-advisor#advisor"
+          size="lg"
+          radius="md"
+          color="primary"
+          rightSection={<IconArrowRight size={18} />}
+          styles={{ root: { height: 48, fontWeight: 600 } }}
+        >
+          {brand.ctaAdvisor}
+        </Button>
+      </HeroSplit>
+
+      <CrisisStatBoard
+        title="Climate stress shows up at planting time"
+        description="Warming, shorter seasons, and seed mismatch hit the same harvest. Climate Insights is the zone model behind every CropX shortlist."
+        stats={crisisStats}
       />
 
       <Box component="section" py="var(--cropx-section-py)" bg="white">
@@ -91,13 +118,17 @@ export default function ClimateInsightsPage() {
               Nigeria spans from semi-desert in the far north to humid forest on the coast. The
               far north gets under 600mm of rain in a season lasting under three months. The
               south-east can get five times that across most of the year. Advice that ignores this
-              is not advice.
+              cannot protect yield or food security.
             </Text>
           </Stack>
         </Container>
       </Box>
 
-      <PillarGrid title="What climate data underpins" pillars={CLIMATE_PILLARS} />
+      <BenefitFeatures
+        title="What climate data underpins"
+        description="Rainfall, drought risk, and stated assumptions — so every seed recommendation stays auditable."
+        features={CLIMATE_BENEFITS}
+      />
 
       <Box component="section" py="var(--cropx-section-py)" bg="white">
         <Container size="xl" px={20}>
@@ -137,8 +168,7 @@ export default function ClimateInsightsPage() {
             </Box>
             <Text size="xs" c="dimmed" style={{ lineHeight: 1.6 }}>
               Long-term averages from the standard agro-ecological classification used by
-              Nigerian agricultural research institutes. These describe a zone, not a field:
-              local variation within a zone is substantial.
+              Nigerian agricultural research institutes. These describe a zone, not a field.
             </Text>
           </Stack>
         </Container>
@@ -146,7 +176,7 @@ export default function ClimateInsightsPage() {
 
       <ProcessTimeline
         title="It is less about totals and more about timing"
-        intro="Annual rainfall figures can look stable while becoming far harder to farm against, because what matters to a crop is when the water arrives, not how much fell over twelve months."
+        intro="Annual rainfall figures can look stable while becoming far harder to farm against, because what matters to a crop — and to next season’s food — is when the water arrives."
         steps={CLIMATE_STEPS}
       />
 
@@ -155,7 +185,7 @@ export default function ClimateInsightsPage() {
           <PhotoEssay
             columns={2}
             title="Two constraints, two different answers"
-            intro="Drought and waterlogging both destroy crops, and they call for opposite decisions. Knowing which one you face is most of the problem."
+            intro="Drought and waterlogging both destroy crops, and they call for opposite seed decisions."
             panels={[
               {
                 slot: 'climate-hero-drought',
@@ -167,7 +197,7 @@ export default function ClimateInsightsPage() {
                 slot: 'climate-irrigation',
                 heading: 'Enough water, other problems',
                 caption:
-                  'In the humid south, rainfall is rarely limiting. Disease pressure, waterlogging and soil acidity are what actually cap yields, so resistance traits outrank drought ratings.',
+                  'In the humid south, rainfall is rarely limiting. Disease pressure, waterlogging and soil acidity are what actually cap yields.',
               },
             ]}
           />
@@ -187,8 +217,8 @@ export default function ClimateInsightsPage() {
 
       <CtaBand
         title="See which varieties suit your zone"
-        description="Four questions about your farm, and a ranked shortlist with the reasoning attached."
-        buttonLabel="Try the Seed Advisor"
+        description={brand.valueProp}
+        buttonLabel={brand.ctaAdvisor}
       />
     </Box>
   );

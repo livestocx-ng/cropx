@@ -1,5 +1,4 @@
-import { Box, Container, Grid, GridCol, Stack, Text, Title } from '@mantine/core';
-import { SectionHeader } from './section-header';
+import { Box, Container, Grid, GridCol, Stack, Text } from '@mantine/core';
 
 export interface ImpactMetric {
   figure: string;
@@ -12,42 +11,58 @@ interface ImpactGridProps {
   description?: string;
 }
 
+/** ThriveAgric-style impact board — oversized numerals, no heavy cards. */
 export function ImpactGrid({ metrics, title, description }: ImpactGridProps) {
   return (
-    <Box component="section" py="var(--cropx-section-py)" bg="white">
+    <Box
+      component="section"
+      py="var(--cropx-section-py)"
+      style={{ backgroundColor: 'var(--cropx-ink)', color: 'white' }}
+    >
       <Container size="xl" px={20}>
-        <Stack gap={40}>
-          <SectionHeader
-            title={title ?? 'What we are building toward'}
-            description={description}
-            align="center"
-          />
+        <Stack gap={48}>
+          <Stack gap="md" maw={720} mx="auto" ta="center">
+            <Text
+              component="h2"
+              m={0}
+              c="white"
+              fw={700}
+              style={{
+                fontFamily: 'var(--cropx-font-heading)',
+                fontSize: 'var(--cropx-text-h2)',
+                letterSpacing: '-0.025em',
+                lineHeight: 1.15,
+              }}
+            >
+              {title ?? 'What we are building toward'}
+            </Text>
+            {description && (
+              <Text m={0} style={{ lineHeight: 1.65, fontSize: 'var(--cropx-text-body-lg)', color: 'rgba(255,255,255,0.72)' }}>
+                {description}
+              </Text>
+            )}
+          </Stack>
 
-          <Grid gutter={{ base: 24, md: 32 }}>
+          <Grid gutter={{ base: 32, md: 48 }}>
             {metrics.map((metric) => (
               <GridCol key={metric.label} span={{ base: 6, md: 4 }}>
-                <Box
-                  p="lg"
-                  style={{
-                    border: '1px solid var(--cropx-border-warm)',
-                    borderRadius: 12,
-                    backgroundColor: 'var(--cropx-cream)',
-                    height: '100%',
-                  }}
-                >
-                  <Stack gap={8}>
-                    <Text
-                      fw={800}
-                      c="primary.7"
-                      style={{ fontSize: 'var(--cropx-stat-size)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
-                    >
-                      {metric.figure}
-                    </Text>
-                    <Text size="sm" c="dark.7" style={{ lineHeight: 1.55 }}>
-                      {metric.label}
-                    </Text>
-                  </Stack>
-                </Box>
+                <Stack gap={10}>
+                  <Text
+                    fw={700}
+                    c="accent.3"
+                    style={{
+                      fontFamily: 'var(--cropx-font-heading)',
+                      fontSize: 'var(--cropx-stat-size)',
+                      lineHeight: 1,
+                      letterSpacing: '-0.04em',
+                    }}
+                  >
+                    {metric.figure}
+                  </Text>
+                  <Text size="sm" style={{ lineHeight: 1.55, color: 'rgba(255,255,255,0.78)' }}>
+                    {metric.label}
+                  </Text>
+                </Stack>
               </GridCol>
             ))}
           </Grid>

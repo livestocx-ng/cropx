@@ -10,9 +10,9 @@ Sourced via [Openverse](https://openverse.org) and
 | File | Title | Creator | Licence | Source |
 | --- | --- | --- | --- | --- |
 | `home-hero-dry-field.jpg` | The edges of the Sahara desert | TREEAID | CC BY | [link](https://www.flickr.com/photos/53871588@N05/5630241115) |
-| `home-before-drought-maize.jpg` | Aluminium toxocity maize roots 2017 01 05 6164 | Alandmanson | CC BY | [link](https://commons.wikimedia.org/w/index.php?curid=58876329) |
-| `home-after-healthy-maize.jpg` | Rice field, Koishikawa Korakuen garden, Tokyo | Dimitry B | CC BY | [link](https://www.flickr.com/photos/61533954@N00/38603180922) |
-| `home-essay-farmer.jpg` | Farmer riding bicycle statue at Chester Hotel Enugu state Nigeria 2 | OtuNwachinemere | CC BY-SA | [link](https://commons.wikimedia.org/w/index.php?curid=132038237) |
+| `home-before-drought-maize.jpg` | NP Ghana 64 copy (5209284418) | Neil Palmer / CIAT | CC BY-SA | [link](https://commons.wikimedia.org/wiki/File:NP_Ghana_64_copy_(5209284418).jpg) |
+| `home-after-healthy-maize.jpg` | Green corn rows and waves of the agricultural fields (52340666758) | Jernej Furman | CC BY | [link](https://commons.wikimedia.org/wiki/File:Green_corn_rows_and_waves_of_the_agricultural_fields_(52340666758).jpg) |
+| `image_farm_description.jpg` | Local upload (Describe the farm) | — | — | — |
 | `home-essay-soil.jpg` | 4000 dpi drum scan sample | Stas Wilf | CC BY | [link](https://www.flickr.com/photos/38629276@N06/5973210179) |
 | `home-essay-seed.jpg` | red heart laser cut box | jared | CC BY | [link](https://www.flickr.com/photos/35468148654@N01/4794928671) |
 | `home-essay-harvest.jpg` | Ugali, the staple food in East Africa | Collins kimeli | CC BY-SA | [link](https://commons.wikimedia.org/w/index.php?curid=76656946) |
@@ -33,7 +33,7 @@ Sourced via [Openverse](https://openverse.org) and
 | `surveillance-scouting.jpg` | 20210717-APHIS-LSC-0887 | USDAgov | Public Domain Mark | [link](https://www.flickr.com/photos/41284017@N08/51340755816) |
 | `surveillance-phone-field.jpg` | 20190828-NRCS-LSC-0007 | USDAgov | Public Domain Mark | [link](https://www.flickr.com/photos/41284017@N08/49392119033) |
 | `surveillance-cassava.jpg` | Cassava plant (Manihot esculenta) | Philipola | CC0 1.0 | [link](https://commons.wikimedia.org/w/index.php?curid=146547871) |
-| `agronomist-hero-extension.jpg` | National Guard ADT receives training from UGA agriculture specialists | Georgia National Guard | CC BY | [link](https://www.flickr.com/photos/40994485@N04/5454599307) |
+| `home_agronomist_network.jpg` | Woman carrying toddler at back while planting | Annie Spratt | Unsplash License | [link](https://unsplash.com/photos/woman-carrying-toddler-at-back-while-planting-2INKkSrEmc8) |
 | `agronomist-training.jpg` | Training women farmers on climate smart innovations in Nyando, Kenya | CGIAR Climate | CC BY | [link](https://www.flickr.com/photos/55227776@N04/9417196732) |
 | `agronomist-soil-test.jpg` | Mars Rovers | Idaho National Laboratory | CC BY | [link](https://www.flickr.com/photos/30369883@N03/4636448856) |
 | `agronomist-field-demo.jpg` | 20140918-NRCS-LSC-0300 | USDAgov | Public Domain Mark | [link](https://www.flickr.com/photos/41284017@N08/15288092801) |

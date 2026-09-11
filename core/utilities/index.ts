@@ -10,16 +10,11 @@ import { Sponsor } from '../types';
 
 export const navLinks = [
   { link: '/seed-advisor', label: 'Seed Advisor' },
-  {
-    label: 'Platform',
-    links: [
-      { link: '/climate-insights', label: 'Climate Insights' },
-      { link: '/crop-surveillance', label: 'Crop Surveillance' },
-      { link: '/agronomist-network', label: 'Agronomist Network' },
-    ],
-  },
+  { link: '/climate-insights', label: 'Climate Insights' },
+  { link: '/crop-surveillance', label: 'Crop Surveillance' },
+  { link: '/agronomist-network', label: 'Agronomist Network' },
   { link: '/blog', label: 'Field Notes' },
-  // { link: '/about-us', label: 'About' },
+  { link: '/about-us', label: 'About' },
 ];
 
 export const platformFeatures = [
@@ -53,12 +48,17 @@ export const platformFaqs = [
   {
     value: 'What does CropX actually do?',
     description:
-      'CropX matches farms to crop varieties bred to withstand drought and heat. You give it a location, a soil type, and the crop you intend to grow; it ranks released varieties by how well they suit those conditions and explains the reasoning behind each one.',
+      'CropX helps safeguard African food security by matching farms to drought- and climate-resilient crop varieties. You give it a location, a soil type, and the crop you intend to grow; it ranks released varieties by how well they suit those conditions and explains the reasoning behind each one.',
   },
   {
     value: 'How does the recommendation work?',
     description:
       'Your state determines the agro-ecological zone, which carries a rainfall range and a reliable growing-season length. Varieties are then filtered by crop and soil compatibility and ranked on drought tolerance, heat tolerance, whether they can mature inside the local season, and yield potential. Drought and heat carry more weight in drier zones.',
+  },
+  {
+    value: 'Is this AI or machine learning?',
+    description:
+      'The Seed Advisor uses AI-assisted ranking against a curated variety dataset: location, soil, and crop drive a transparent score. In this preview the numeric resilience scores are composite estimates written to demonstrate the method, not outputs from a trained field model. Treat them as a starting point for an agronomist conversation.',
   },
   {
     value: 'Are these varieties genetically modified?',
@@ -103,30 +103,79 @@ export const impactStats = [
   },
 ];
 
+/** Girlified-style dual-crisis board — three crop-risk cards. */
+export const crisisStats = [
+  {
+    figure: '1.5–2×',
+    label: 'Faster Sahel warming',
+    body: 'The growing season is shortening and mid-season dry spells are more common — varieties bred for yesterday’s climate are a food-security risk.',
+    category: 'Climate',
+  },
+  {
+    figure: '30%',
+    label: 'Yield at stake',
+    body: 'A poorly matched variety can lose a large share of harvest when rains break early. That is household food, not only farm income.',
+    category: 'Seed mismatch',
+    source: 'Indicative range, not a measured trial figure',
+  },
+  {
+    figure: '2 in 3',
+    label: 'Smallholder farms',
+    body: 'Most farms are under two hectares. Seed choice has to be legible without accounts, dashboards, or specialist jargon.',
+    category: 'Food security',
+  },
+];
+
+export const benefitFeatures = [
+  {
+    title: 'Zone-first matching',
+    body: 'Your state maps to one of six agro-ecological zones with rainfall and season length — so recommendations start from the climate you actually farm in.',
+    benefit: 'Location becomes a climate fact, not a guess',
+  },
+  {
+    title: 'Drought- and heat-aware ranking',
+    body: 'Released varieties are scored on drought tolerance, heat tolerance, season fit, and yield potential, weighted by how much each matters locally.',
+    benefit: 'Resilience weighted where it counts most',
+  },
+  {
+    title: 'Reasoning on every match',
+    body: 'Every shortlist entry explains why it ranked where it did — including risks such as a maturity window that may outlast the rains.',
+    benefit: 'No black box planting advice',
+  },
+];
+
 export const howItWorksSteps = [
   {
     label: 'Step one',
     heading: 'Describe the farm',
     body: 'State, soil type, the crop you plan to grow, and how much land you are planting. No account, no personal details, nothing stored.',
     slot: 'home-essay-farmer' as const,
+    aspect: '3 / 4',
+    objectPosition: 'center 18%',
   },
   {
     label: 'Step two',
     heading: 'Locate it in a climate',
     body: 'Your state resolves to one of six agro-ecological zones, each with a rainfall range, a growing-season length, and a drought risk profile. This is what turns a general question into a specific one.',
-    slot: 'climate-sahel' as const,
+    slot: 'agronomist-hero-extension' as const,
+    aspect: '16 / 11',
+    objectPosition: 'center 35%',
   },
   {
     label: 'Step three',
     heading: 'Rank the released varieties',
     body: 'Varieties bred for that zone and suited to that soil are scored on drought tolerance, heat tolerance, season fit, and yield potential, weighted by how much each matters where you are.',
-    slot: 'advisor-trial-plots' as const,
+    slot: 'advisor-hero-seedlings' as const,
+    aspect: '16 / 11',
+    objectPosition: 'center 40%',
   },
   {
     label: 'Step four',
     heading: 'Read the reasoning',
     body: 'Every recommendation explains why it ranked where it did, including the reasons against it. A variety that may not finish before the rains withdraw is flagged, not hidden.',
-    slot: 'home-essay-seed' as const,
+    slot: 'agronomist-training' as const,
+    aspect: '16 / 11',
+    objectPosition: 'center 30%',
   },
 ];
 
@@ -134,28 +183,28 @@ export const solutionCards = [
   {
     title: 'Seed Advisor',
     description:
-      'Rank released varieties for your state, soil, and crop. See the reasoning behind every suggestion.',
+      'The core food-security tool: rank drought- and climate-resilient varieties for your state, soil, and crop — with the reasoning shown.',
     href: '/seed-advisor',
     slot: 'advisor-hero-seedlings' as const,
   },
   {
     title: 'Climate Insights',
     description:
-      'Six agro-ecological zones, rainfall ranges, and season lengths that underpin every recommendation.',
+      'Six agro-ecological zones, rainfall ranges, and season lengths — the climate assumptions behind every seed recommendation.',
     href: '/climate-insights',
     slot: 'climate-hero-drought' as const,
   },
   {
     title: 'Crop Surveillance',
     description:
-      'Early warning for pest and disease pressure, designed to connect with resistance traits in seed choice.',
+      'Early warning for pest and disease pressure that can erase a well-chosen variety before harvest.',
     href: '/crop-surveillance',
     slot: 'surveillance-hero-pest' as const,
   },
   {
     title: 'Agronomist Network',
     description:
-      'Software handles the routine ranking; agronomists handle the judgement calls that need a human.',
+      'Software ranks climate-fit options; agronomists confirm what actually works on the ground.',
     href: '/agronomist-network',
     slot: 'agronomist-hero-extension' as const,
   },

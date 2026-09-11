@@ -45,11 +45,12 @@ export default function ContactPage() {
         asH1
         narrow
         align="center"
+        eyebrow="Contact"
         title="Get in touch"
-        description="Questions about variety recommendations, partnering as an agronomist, or the data behind the advisor."
+        description="Questions about climate-resilient variety recommendations, partnering as an agronomist, or the data behind the advisor."
       />
 
-      <Box py={{ base: 48, md: 72 }} style={{ backgroundColor: 'var(--cropx-cream)' }}>
+      <Box py="var(--cropx-section-py)" style={{ backgroundColor: 'var(--cropx-cream)' }}>
         <Container size="xl" px={20}>
           <Grid gutter={{ base: 30, md: 48 }}>
             <GridCol span={{ base: 12, md: 7 }}>
@@ -57,7 +58,7 @@ export default function ContactPage() {
                 withBorder
                 radius="md"
                 p={{ base: 'lg', md: 'xl' }}
-                style={{ backgroundColor: 'var(--cropx-white)', borderColor: 'var(--cropx-border-warm)' }}
+                style={{ backgroundColor: 'var(--cropx-white)', borderColor: 'var(--cropx-border)', borderRadius: 12 }}
               >
                 <Stack gap="md">
                   <Text fw={700} size="lg">Send us a message</Text>
@@ -124,7 +125,7 @@ export default function ContactPage() {
                     withBorder
                     radius="md"
                     p="lg"
-                    style={{ backgroundColor: 'var(--cropx-white)', borderColor: 'var(--cropx-border-warm)' }}
+                    style={{ backgroundColor: 'var(--cropx-white)', borderColor: 'var(--cropx-border)', borderRadius: 12 }}
                   >
                     <Group gap="sm" wrap="nowrap" align="flex-start">
                       <IconMapPin size={18} color="var(--mantine-color-primary-7)" style={{ flexShrink: 0, marginTop: 2 }} />
@@ -144,7 +145,7 @@ export default function ContactPage() {
                   withBorder
                   radius="md"
                   p="lg"
-                  style={{ backgroundColor: 'var(--cropx-white)', borderColor: 'var(--cropx-border-warm)' }}
+                  style={{ backgroundColor: 'var(--cropx-white)', borderColor: 'var(--cropx-border)', borderRadius: 12 }}
                 >
                   <Stack gap="md">
                     <Group gap="sm" wrap="nowrap">

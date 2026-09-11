@@ -6,11 +6,21 @@ const LAST_UPDATED = '7 September 2026';
 
 export default function PrivacyPolicyPage() {
   return (
-    <Box style={{ backgroundColor: 'var(--cropx-cream)', minHeight: '100%' }}>
-      <Container size="md" px={20} py={{ base: 48, md: 72 }}>
+    <Box style={{ backgroundColor: 'var(--cropx-white)', minHeight: '100%' }}>
+      <Container size="md" px={20} py="var(--cropx-section-py)">
         <Stack gap="xl">
           <Stack gap="sm">
-            <Title order={1} style={{ fontSize: rem(34), fontWeight: 800, lineHeight: 1.2 }}>
+            <Title
+              order={1}
+              style={{
+                fontFamily: 'var(--cropx-font-heading)',
+                fontSize: 'var(--cropx-text-display)',
+                fontWeight: 700,
+                lineHeight: 1.08,
+                letterSpacing: '-0.035em',
+                color: 'var(--cropx-ink)',
+              }}
+            >
               Privacy Policy
             </Title>
             <Text size="sm" c="dimmed">

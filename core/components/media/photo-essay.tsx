@@ -1,9 +1,8 @@
 'use client';
 
-import { Box, SimpleGrid, Stack, Text, Title, rem } from '@mantine/core';
+import { Box, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 import { ImageSlot } from '@/core/content/image-manifest';
 import { ManagedImage } from './managed-image';
-import { ScrollReveal } from './scroll-reveal';
 
 export interface EssayPanel {
   slot: ImageSlot;
@@ -19,66 +18,88 @@ interface PhotoEssayProps {
   intro?: string;
 }
 
-/**
- * A captioned image sequence.
- *
- * Captions are required rather than optional: an uncaptioned grid of stock
- * photographs is decoration, and the point of this component is to advance
- * the argument the page is making.
- */
+/** Caption-led photo sequence — borderless editorial crops. */
 export function PhotoEssay({ panels, columns = 3, title, intro }: PhotoEssayProps) {
   return (
-    <Stack gap={rem(40)}>
+    <Stack gap={40}>
       {(title || intro) && (
-        <ScrollReveal>
-          <Stack gap="sm" maw={680}>
-            {title && (
-              <Title order={2} style={{ fontSize: rem(32), fontWeight: 700, lineHeight: 1.2 }}>
-                {title}
-              </Title>
-            )}
-            {intro && (
-              <Text c="dimmed" style={{ fontSize: rem(17), lineHeight: 1.7 }}>
-                {intro}
-              </Text>
-            )}
-          </Stack>
-        </ScrollReveal>
+        <Stack gap="sm" maw={680}>
+          {title && (
+            <Title
+              order={2}
+              style={{
+                fontFamily: 'var(--cropx-font-heading)',
+                fontSize: 'var(--cropx-text-h2)',
+                fontWeight: 700,
+                lineHeight: 1.15,
+                letterSpacing: '-0.025em',
+              }}
+            >
+              {title}
+            </Title>
+          )}
+          {intro && (
+            <Text style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.7, color: 'var(--cropx-muted)' }}>
+              {intro}
+            </Text>
+          )}
+        </Stack>
       )}
 
-      <SimpleGrid cols={{ base: 1, sm: 2, md: columns }} spacing={rem(28)}>
-        {panels.map((panel, index) => (
-          <ScrollReveal key={panel.slot} index={index}>
-            <Stack gap="sm">
-              <Box
+      <SimpleGrid cols={{ base: 1, sm: 2, md: columns }} spacing={{ base: 28, md: 32 }}>
+        {panels.map((panel) => (
+          <Stack key={panel.slot} gap="sm">
+            <Box
+              className="essay-media"
+              style={{
+                position: 'relative',
+                aspectRatio: '5 / 4',
+                overflow: 'hidden',
+                borderRadius: 8,
+                backgroundColor: 'var(--cropx-cream)',
+              }}
+            >
+              <ManagedImage
+                slot={panel.slot}
+                fill
+                sizes={`(max-width: 768px) 100vw, ${Math.round(100 / columns)}vw`}
+                showCredit
+                className="essay-media-img"
+              />
+            </Box>
+
+            {panel.heading && (
+              <Text
+                fw={700}
                 style={{
-                  position: 'relative',
-                  aspectRatio: '4 / 3',
-                  overflow: 'hidden',
-                  borderRadius: rem(12),
+                  fontFamily: 'var(--cropx-font-heading)',
+                  letterSpacing: '-0.02em',
+                  color: 'var(--cropx-ink)',
                 }}
               >
-                <ManagedImage
-                  slot={panel.slot}
-                  fill
-                  sizes={`(max-width: 768px) 100vw, ${Math.round(100 / columns)}vw`}
-                  showCredit
-                />
-              </Box>
-
-              {panel.heading && (
-                <Text fw={700} size="md" c="dark.8">
-                  {panel.heading}
-                </Text>
-              )}
-
-              <Text size="sm" c="dimmed" style={{ lineHeight: 1.65 }}>
-                {panel.caption}
+                {panel.heading}
               </Text>
-            </Stack>
-          </ScrollReveal>
+            )}
+
+            <Text size="sm" style={{ lineHeight: 1.65, color: 'var(--cropx-muted)' }}>
+              {panel.caption}
+            </Text>
+          </Stack>
         ))}
       </SimpleGrid>
+
+      <style>{`
+        .essay-media-img {
+          transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .essay-media:hover .essay-media-img {
+          transform: scale(1.04);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .essay-media-img { transition: none; }
+          .essay-media:hover .essay-media-img { transform: none; }
+        }
+      `}</style>
     </Stack>
   );
 }

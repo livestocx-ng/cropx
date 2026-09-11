@@ -52,8 +52,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <Box>
       <Box
         component="section"
-        py={{ base: 40, md: 56 }}
-        style={{ backgroundColor: 'var(--cropx-cream)', borderBottom: '1px solid var(--cropx-border-warm)' }}
+        py="var(--cropx-hero-py)"
+        style={{ backgroundColor: 'var(--cropx-white)', borderBottom: '1px solid var(--cropx-border)' }}
       >
         <Container size="md" px={20} maw="var(--cropx-reading-max)">
           <Stack gap="md">
@@ -65,16 +65,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Text size="sm" c="dimmed">{post.readMinutes} min read</Text>
             </Group>
 
-            <Title order={1} style={{ fontSize: 'var(--cropx-text-display)', lineHeight: 1.15 }}>
+            <Title
+              order={1}
+              style={{
+                fontFamily: 'var(--cropx-font-heading)',
+                fontSize: 'var(--cropx-text-display)',
+                lineHeight: 1.08,
+                letterSpacing: '-0.035em',
+                color: 'var(--cropx-ink)',
+              }}
+            >
               {post.title}
             </Title>
           </Stack>
         </Container>
       </Box>
 
-      <Container size="md" px={20} py={{ base: 32, md: 48 }} maw="var(--cropx-reading-max)">
+      <Container size="md" px={20} py="var(--cropx-section-py-sm)" maw="var(--cropx-reading-max)">
         <Stack gap="xl">
-          <Box style={{ position: 'relative', aspectRatio: '16 / 9', borderRadius: 12, overflow: 'hidden' }}>
+          <Box style={{ position: 'relative', aspectRatio: '16 / 9', borderRadius: 8, overflow: 'hidden' }}>
             <ManagedImage slot={post.cover} fill sizes="(max-width: 680px) 100vw, 680px" showCredit priority />
           </Box>
 
@@ -147,7 +156,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </Container>
 
       {related.length > 0 && (
-        <Box py={{ base: 48, md: 72 }} style={{ backgroundColor: 'var(--cropx-cream)' }}>
+        <Box py="var(--cropx-section-py)" style={{ backgroundColor: 'var(--cropx-cream)' }}>
           <Container size="xl" px={20}>
             <Stack gap="xl">
               <SectionHeader title="More field notes" />

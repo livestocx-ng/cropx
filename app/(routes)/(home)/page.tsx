@@ -1,110 +1,117 @@
-import Link from 'next/link';
-import { Box, Button, Container, Group, Stack, Text } from '@mantine/core';
-import { IconArrowRight } from '@tabler/icons-react';
-import { AdvisorPreview } from '@/core/components/advisor/advisor-preview';
+import { Box, Container, Stack, Text } from '@mantine/core';
 import { BeforeAfter } from '@/core/components/media';
+import { BenefitFeatures } from '@/core/components/sections/benefit-features';
+import { CrisisStatBoard } from '@/core/components/sections/crisis-stat-board';
 import { CtaBand } from '@/core/components/sections/cta-band';
-import { HeroSplit } from '@/core/components/sections/hero-split';
+import { FieldNotesCarousel } from '@/core/components/sections/field-notes-carousel';
+import { HomeHero } from '@/core/components/sections/home-hero';
 import { ImpactGrid } from '@/core/components/sections/impact-grid';
 import { LogoStrip } from '@/core/components/sections/logo-strip';
-import { MetricStrip } from '@/core/components/sections/metric-strip';
 import { ProcessTimeline } from '@/core/components/sections/process-timeline';
+import { RecognitionBand } from '@/core/components/sections/recognition-band';
 import { SectionHeader } from '@/core/components/sections/section-header';
 import { SolutionGrid } from '@/core/components/sections/solution-grid';
+import { brand } from '@/core/content/brand';
 import {
+  benefitFeatures,
+  crisisStats,
   howItWorksSteps,
   impactGridMetrics,
-  impactStats,
   solutionCards,
 } from '@/core/utilities';
 
 export default function HomePage() {
   return (
     <Box>
-      <HeroSplit
-        asH1
-        title="The rains have changed. The seed has to change with them."
-        description="CropX uses AI to match farms with the drought and heat-resilient crop varieties that can still deliver a harvest in an ever-warming environment."
-        visual={<AdvisorPreview />}
-      >
-        <Group gap="md">
-          <Button
-            component={Link}
-            href="/seed-advisor#advisor"
-            size="lg"
-            radius="md"
-            color="primary"
-            rightSection={<IconArrowRight size={18} />}
-          >
-            Find seed for your farm
-          </Button>
-          <Button
-            component={Link}
-            href="/climate-insights"
-            size="lg"
-            radius="md"
-            variant="outline"
-            color="dark"
-          >
-            See the climate picture
-          </Button>
-        </Group>
-      </HeroSplit>
+      <HomeHero />
 
-      <MetricStrip stats={impactStats} />
+      <LogoStrip />
+
+      <RecognitionBand />
 
       <Box component="section" py="var(--cropx-section-py)" bg="white">
         <Container size="xl" px={20}>
-          <Stack gap="lg" maw={760}>
-            <SectionHeader title="Most farmers are planting seed bred for a climate that no longer exists" />
-            <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
-              Across the Sahel and the savanna, the rains start later, stop earlier, and break in
-              the middle more often than they did a generation ago. A variety that reliably
-              finished its cycle in 1990 may now run out of water three weeks before harvest.
+          <Stack gap="xl" maw={760}>
+            <SectionHeader title="Why choose CropX?" />
+            <Text style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75, color: 'var(--cropx-muted)' }}>
+              Most farmers are still planting seed bred for a climate that no longer exists. Across
+              the Sahel and the savanna, rains start later, stop earlier, and break mid-season more
+              often than a generation ago — and a failed harvest is a food-security problem, not
+              only a yield problem.
             </Text>
-            <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
-              Meanwhile research institutes have released dozens of varieties bred precisely for
-              these conditions. The gap is not science. It is that a farmer in Katsina has no
-              practical way to know which of those varieties suits their field, their soil, and
-              the length of the season they can actually expect.
+            <Text style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75, color: 'var(--cropx-muted)' }}>
+              Research institutes have already released drought- and heat-resilient varieties.
+              CropX closes the gap between that science and the farm gate: {brand.valueProp}
             </Text>
+            <Box
+              p="lg"
+              style={{
+                borderLeft: '3px solid var(--mantine-color-primary-6)',
+                backgroundColor: 'var(--cropx-cream)',
+                borderRadius: '0 8px 8px 0',
+              }}
+            >
+              <Text
+                style={{
+                  fontFamily: 'var(--cropx-font-heading)',
+                  fontSize: 'var(--cropx-text-h3)',
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.35,
+                  color: 'var(--cropx-ink)',
+                }}
+              >
+                “Match the variety to the season that is actually coming — not the one that used to
+                come.”
+              </Text>
+              <Text size="sm" c="dimmed" mt="sm">
+                CropX agronomy principle
+              </Text>
+            </Box>
           </Stack>
         </Container>
       </Box>
 
-      <Box py="var(--cropx-section-py)" style={{ backgroundColor: 'var(--cropx-cream)' }}>
+      <BenefitFeatures features={benefitFeatures} />
+
+      <CrisisStatBoard stats={crisisStats} />
+
+      {/* <Box py="var(--cropx-section-py)" bg="white">
         <Container size="xl" px={20}>
           <BeforeAfter
             beforeSlot="home-before-drought-maize"
             afterSlot="home-after-healthy-maize"
             beforeLabel="Poorly matched variety"
-            afterLabel="Zone-matched variety"
+            afterLabel="Climate-matched variety"
             title="Not all seed fails the same way"
-            caption="Drag to compare. Both fields faced the same season. The difference is whether the variety planted could finish its cycle inside the water that was actually available. Photographs are illustrative rather than a documented trial pair."
+            caption="Drag to compare. Both fields faced the same season. The difference is whether the variety could finish inside the water that was actually available. Photographs are illustrative rather than a documented trial pair."
           />
         </Container>
-      </Box>
+      </Box> */}
 
       <ProcessTimeline
-        title="From a location to a shortlist, with the reasoning shown"
-        intro="No account, no data collection, and no black box. Every recommendation can be traced back to the rainfall, soil, and season assumptions behind it."
+        title="How a shortlist is built"
+        intro="Four steps from farm conditions to a climate-fit variety ranking — no account, no data stored, and the reasoning shown for every match."
         steps={howItWorksSteps}
       />
 
       <SolutionGrid
-        title="Seed choice is the start, not the whole job"
-        description="Four tools designed around the planting decision — and the climate, pest, and advisory context that surrounds it."
+        title="Seed choice is the start of food security work"
+        description="Four tools around the planting decision — climate context, pest pressure, and human advisory — with the Seed Advisor at the centre."
         solutions={solutionCards}
       />
 
-      <ImpactGrid metrics={impactGridMetrics} />
+      <ImpactGrid
+        title="What we are building toward"
+        description="A practical path from location to a climate-resilient variety shortlist that protects yield under warming conditions."
+        metrics={impactGridMetrics}
+      />
 
-      <LogoStrip />
+      <FieldNotesCarousel />
 
       <CtaBand
-        title="Find out which varieties suit your farm"
-        description="Four questions, no account, and the reasoning behind every suggestion."
-        buttonLabel="Open the Seed Advisor"
+        title="Protect next season’s harvest"
+        description="Four questions, no account, and a ranked shortlist of drought- and climate-resilient varieties for your farm."
+        buttonLabel={brand.ctaAdvisorOpen}
       />
     </Box>
   );

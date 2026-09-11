@@ -9,24 +9,29 @@ import {
   Text,
 } from '@mantine/core';
 import { ImageMosaic } from '@/core/components/media';
+import { BenefitFeatures } from '@/core/components/sections/benefit-features';
 import { CtaBand } from '@/core/components/sections/cta-band';
 import { HeroSplit } from '@/core/components/sections/hero-split';
-import { PillarGrid } from '@/core/components/sections/pillar-grid';
+import { LogoStrip } from '@/core/components/sections/logo-strip';
 import { SectionHeader } from '@/core/components/sections/section-header';
+import { brand } from '@/core/content/brand';
 import { platformFaqs, showTeamSection, teamMembers } from '@/core/utilities';
 
-const ABOUT_PILLARS = [
+const ABOUT_BENEFITS = [
   {
     title: 'Not selling seed',
-    body: 'CropX takes no commission and stocks nothing. That is what lets a recommendation be about agronomy rather than about margin.',
+    body: 'CropX takes no commission and stocks nothing. That is what lets a recommendation be about agronomy and food security rather than about margin.',
+    benefit: 'Advice without a sales commission',
   },
   {
     title: 'Not collecting farmer data',
     body: 'The advisor runs entirely in your browser. There is no account, and nothing you enter is transmitted or stored.',
+    benefit: 'No account, nothing stored',
   },
   {
     title: 'Not claiming certainty',
     body: 'The resilience scores in this preview are estimates, and we say so on every result. Overstated confidence in agricultural advice costs farmers harvests.',
+    benefit: 'Honest limits on every shortlist',
   },
 ];
 
@@ -36,9 +41,12 @@ export default function AboutPage() {
       <HeroSplit
         asH1
         align="center"
-        title="Safeguarding African food security, one planting decision at a time"
-        description="CropX exists to close the gap between the climate-resilient varieties research has already produced and the farmers who have no practical way to find them."
+        eyebrow="Our mission"
+        title={brand.missionShort}
+        description={brand.missionFull}
       />
+
+      <LogoStrip />
 
       <Box component="section" py="var(--cropx-section-py)" bg="white">
         <Container size="xl" px={20}>
@@ -54,12 +62,14 @@ export default function AboutPage() {
               <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
                 What does not exist, for most farmers, is a way to find out which of them suits a
                 particular field. So the default is to plant what was planted last year, in a
-                climate that is no longer last year&rsquo;s climate.
+                climate that is no longer last year&rsquo;s climate — and food security pays the
+                price when the harvest fails.
               </Text>
               <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
                 CropX is an attempt to make that decision legible: to take a location, a soil, and
-                a crop, and return a shortlist with the reasoning attached. Not to sell seed, and
-                not to replace the agronomists who do the work that software cannot.
+                a crop, and return a shortlist of drought- and climate-resilient varieties with the
+                reasoning attached. Not to sell seed, and not to replace the agronomists who do the
+                work that software cannot.
               </Text>
             </Stack>
 
@@ -70,7 +80,27 @@ export default function AboutPage() {
         </Container>
       </Box>
 
-      <PillarGrid title="What we are deliberately not doing" pillars={ABOUT_PILLARS} />
+      <Box component="section" py="var(--cropx-section-py)" style={{ backgroundColor: 'var(--cropx-cream)' }}>
+        <Container size="xl" px={20}>
+          <Stack gap="lg" maw={760}>
+            <SectionHeader title="How the pieces connect" />
+            <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
+              Warming and unreliable rains → poorly matched seed → lost yield and household food
+              risk → the right variety for zone, soil, and season → a more reliable harvest.
+              That is the theory of change behind every recommendation.
+            </Text>
+            <Text size="sm" c="dimmed" style={{ lineHeight: 1.65 }}>
+              {brand.sdgLine}
+            </Text>
+          </Stack>
+        </Container>
+      </Box>
+
+      <BenefitFeatures
+        title="What we are deliberately not doing"
+        description="Boundaries that keep recommendations about food security rather than about margin or data extraction."
+        features={ABOUT_BENEFITS}
+      />
 
       {showTeamSection && (
         <Box py="var(--cropx-section-py)" bg="white">
@@ -79,10 +109,18 @@ export default function AboutPage() {
               <SectionHeader title="The team" />
               <Stack gap="md">
                 {teamMembers.map((member) => (
-                  <Box key={member.image} p="lg" style={{ border: '1px solid var(--cropx-border-warm)', borderRadius: 12 }}>
+                  <Box
+                    key={member.image}
+                    p="lg"
+                    style={{ border: '1px solid var(--cropx-border)', borderRadius: 16 }}
+                  >
                     <Text fw={700}>{member.name}</Text>
-                    <Text size="sm" c="primary.7" fw={600}>{member.role}</Text>
-                    <Text size="sm" c="dimmed" style={{ lineHeight: 1.65 }}>{member.bio}</Text>
+                    <Text size="sm" c="primary.7" fw={600}>
+                      {member.role}
+                    </Text>
+                    <Text size="sm" c="dimmed" style={{ lineHeight: 1.65 }}>
+                      {member.bio}
+                    </Text>
                   </Box>
                 ))}
               </Stack>
@@ -115,9 +153,9 @@ export default function AboutPage() {
       </Box>
 
       <CtaBand
-        title="Try the Seed Advisor"
-        description="Four questions about your farm, and a ranked shortlist with the reasoning attached."
-        buttonLabel="Open the Seed Advisor"
+        title={brand.ctaAdvisorOpen}
+        description="Four questions about your farm, and a ranked shortlist of climate-resilient varieties."
+        buttonLabel={brand.ctaAdvisorOpen}
       />
     </Box>
   );

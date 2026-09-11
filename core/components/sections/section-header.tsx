@@ -10,10 +10,26 @@ export function SectionHeader({ title, description, align = 'left' }: SectionHea
   const centred = align === 'center';
 
   return (
-    <Stack gap="sm" maw={centred ? 720 : 680} mx={centred ? 'auto' : undefined} ta={centred ? 'center' : 'left'}>
-      <Title order={2}>{title}</Title>
+    <Stack gap="md" maw={centred ? 760 : 720} mx={centred ? 'auto' : undefined} ta={centred ? 'center' : 'left'}>
+      <Title
+        order={2}
+        style={{
+          fontFamily: 'var(--cropx-font-heading)',
+          letterSpacing: '-0.025em',
+          color: 'var(--cropx-ink)',
+        }}
+      >
+        {title}
+      </Title>
       {description && (
-        <Text c="dimmed" size="lg" style={{ lineHeight: 1.7 }}>
+        <Text
+          m={0}
+          style={{
+            lineHeight: 1.7,
+            fontSize: 'var(--cropx-text-body-lg)',
+            color: 'var(--cropx-muted)',
+          }}
+        >
           {description}
         </Text>
       )}

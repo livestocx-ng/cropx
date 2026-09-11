@@ -1,4 +1,4 @@
-import { Anchor, Box, Container, Stack, Table, TableTbody, TableTd, TableTh, TableThead, TableTr, Text, Title, rem } from '@mantine/core';
+import { Anchor, Box, Container, Stack, Table, TableTbody, TableTd, TableTh, TableThead, TableTr, Text, Title } from '@mantine/core';
 import { attributedImages, images } from '@/core/content/image-manifest';
 import { buildMetadata } from '@/core/utils/metadata';
 
@@ -11,14 +11,24 @@ export default function ImageCreditsPage() {
   const total = Object.keys(images).length;
 
   return (
-    <Box style={{ backgroundColor: 'var(--cropx-cream)', minHeight: '100%' }}>
-      <Container size="md" px={20} py={{ base: 48, md: 72 }}>
+    <Box style={{ backgroundColor: 'var(--cropx-white)', minHeight: '100%' }}>
+      <Container size="md" px={20} py="var(--cropx-section-py)">
         <Stack gap="lg">
-          <Title order={1} style={{ fontSize: rem(34), fontWeight: 800, lineHeight: 1.2 }}>
+          <Title
+            order={1}
+            style={{
+              fontFamily: 'var(--cropx-font-heading)',
+              fontSize: 'var(--cropx-text-display)',
+              fontWeight: 700,
+              lineHeight: 1.08,
+              letterSpacing: '-0.035em',
+              color: 'var(--cropx-ink)',
+            }}
+          >
             Photo credits
           </Title>
 
-          <Text c="dimmed" style={{ fontSize: rem(17), lineHeight: 1.75 }}>
+          <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
             Every photograph on this site is used under a licence permitting commercial use and
             modification. Images have been resized and recompressed from their originals; the
             licence of each derivative is unchanged. Of {total} photographs, {attributedImages.length}{' '}

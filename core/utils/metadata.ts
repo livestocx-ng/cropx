@@ -1,17 +1,13 @@
 import type { Metadata } from 'next';
+import { brand } from '@/core/content/brand';
 
 export const SITE_NAME = 'CropX';
 export const SITE_URL = 'https://cropx.africa';
 
-export const SITE_DESCRIPTION =
-  'CropX uses AI to match African farms with drought and climate-resilient crop varieties, so smallholders get the best yield an ever-warming environment allows.';
+export const SITE_DESCRIPTION = brand.siteDescription;
 
 /**
  * Shared metadata builder.
- *
- * The previous site repeated a ~90-line block in every route layout, including
- * hardcoded S3 open-graph images and a Facebook domain verification token.
- * Each layout now calls this instead.
  *
  * TODO: add a real open-graph image at public/og/cropx-og.jpg (1200x630).
  */
@@ -23,10 +19,10 @@ export function buildMetadata(title: string, description: string = SITE_DESCRIPT
     description,
     keywords: [
       'CropX',
-      'climate-resilient seeds',
+      'African food security',
+      'climate-resilient seed varieties',
       'drought tolerant varieties',
-      'African agriculture',
-      'food security',
+      'climate-smart agriculture',
       'smallholder farmers',
       'seed selection',
       'agronomy',

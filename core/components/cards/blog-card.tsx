@@ -17,11 +17,10 @@ export function BlogCard({ post }: { post: BlogPost }) {
         gap: 24,
         textDecoration: 'none',
         color: 'inherit',
-        border: '1px solid var(--cropx-border-warm)',
-        borderRadius: 12,
+        borderRadius: 8,
         overflow: 'hidden',
         backgroundColor: 'var(--cropx-white)',
-        transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
+        transition: 'box-shadow 0.25s ease, transform 0.25s ease',
       }}
       className="blog-card"
     >
@@ -65,8 +64,8 @@ export function BlogCard({ post }: { post: BlogPost }) {
           }
         }
         .blog-card:hover {
-          border-color: var(--mantine-color-primary-3);
-          box-shadow: 0 8px 24px rgba(12, 31, 20, 0.06);
+          box-shadow: 0 16px 40px rgba(10, 31, 18, 0.08);
+          transform: translateY(-2px);
         }
       `}</style>
     </Box>

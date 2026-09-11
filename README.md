@@ -1,6 +1,6 @@
 # CropX Web
 
-Marketing site and interactive preview for **CropX** — an AI-assisted platform that helps African farmers choose drought- and climate-resilient crop seed varieties.
+Marketing site and interactive preview for **CropX** — safeguarding African food security by helping farmers choose drought- and climate-resilient seed varieties for an ever-warming environment.
 
 There is no marketplace, no user accounts, and no backend dependency. The Seed Advisor runs entirely in the browser against a curated local dataset.
 
