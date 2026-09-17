@@ -1,9 +1,9 @@
 import { Box, Container, Stack, Text } from '@mantine/core';
-import { BeforeAfter } from '@/core/components/media';
 import { BenefitFeatures } from '@/core/components/sections/benefit-features';
 import { CrisisStatBoard } from '@/core/components/sections/crisis-stat-board';
 import { CtaBand } from '@/core/components/sections/cta-band';
 import { FieldNotesCarousel } from '@/core/components/sections/field-notes-carousel';
+import { FounderBand } from '@/core/components/sections/founder-band';
 import { HomeHero } from '@/core/components/sections/home-hero';
 import { ImpactGrid } from '@/core/components/sections/impact-grid';
 import { LogoStrip } from '@/core/components/sections/logo-strip';
@@ -28,6 +28,8 @@ export default function HomePage() {
       <LogoStrip />
 
       <RecognitionBand />
+
+      <FounderBand />
 
       <Box component="section" py="var(--cropx-section-py)" bg="white">
         <Container size="xl" px={20}>

@@ -63,7 +63,7 @@ const SLOTS = {
   },
   'home-essay-harvest': {
     role: 'INLINE',
-    alt: 'Harvested grain being gathered and sorted after threshing',
+    alt: 'CropX co-founder Oghenekevwe Emadago holding a freshly harvested ear of maize in a cornfield',
   },
   'home-impact-market': {
     role: 'FULL_BLEED',
@@ -143,7 +143,7 @@ const SLOTS = {
   // ---------------------------------------------------- agronomist network
   'agronomist-hero-extension': {
     role: 'FULL_BLEED',
-    alt: 'Farmers planting together in a field, with one woman pointing while carrying a child on her back',
+    alt: 'CropX co-founder Oghenekevwe Emadago examining maize with a laptop in a cornfield',
   },
   'agronomist-training': {
     role: 'FULL_BLEED',

@@ -156,17 +156,17 @@
     "requiresAttribution": false
   },
   "agronomist-hero-extension": {
-    "title": "Woman carrying toddler at back while planting",
-    "creator": "Annie Spratt",
-    "creatorUrl": "https://unsplash.com/@anniespratt",
-    "licence": "Unsplash License",
+    "title": "agronomist-field-laptop",
+    "creator": null,
+    "creatorUrl": null,
+    "licence": null,
     "licenceVersion": null,
-    "licenceUrl": "https://unsplash.com/license",
-    "source": "unsplash",
-    "sourceUrl": "https://unsplash.com/photos/woman-carrying-toddler-at-back-while-planting-2INKkSrEmc8",
-    "originalUrl": "/images/cropx/home_agronomist_network.jpg",
-    "query": "user upload — agronomist network",
-    "requiresAttribution": true
+    "licenceUrl": null,
+    "source": "local",
+    "sourceUrl": null,
+    "originalUrl": "/images/cropx/agronomist-field-laptop.jpg",
+    "query": "user upload — agronomist with laptop in maize field",
+    "requiresAttribution": false
   },
   "about-mosaic-1": {
     "title": "Farmer - Dakhla Oasis - Egypt. Free Stock Photo",
@@ -299,17 +299,17 @@
     "requiresAttribution": true
   },
   "home-essay-harvest": {
-    "title": "Ugali, the staple food in East Africa",
-    "creator": "Collins kimeli",
-    "creatorUrl": "https://commons.wikimedia.org/w/index.php?title=User:Collins_kimeli&action=edit&redlink=1",
-    "licence": "CC BY-SA",
-    "licenceVersion": "4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "source": "wikimedia",
-    "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=76656946",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Ugali%2C_the_staple_food_in_East_Africa.jpg",
-    "query": "maize harvest africa",
-    "requiresAttribution": true
+    "title": "home-maize-harvest",
+    "creator": null,
+    "creatorUrl": null,
+    "licence": null,
+    "licenceVersion": null,
+    "licenceUrl": null,
+    "source": "local",
+    "sourceUrl": null,
+    "originalUrl": "/images/cropx/home-maize-harvest.jpg",
+    "query": "user upload — maize harvest portrait",
+    "requiresAttribution": false
   },
   "advisor-seed-closeup": {
     "title": "Kilo de milo",

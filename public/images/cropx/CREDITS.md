@@ -15,7 +15,7 @@ Sourced via [Openverse](https://openverse.org) and
 | `image_farm_description.jpg` | Local upload (Describe the farm) | — | — | — |
 | `home-essay-soil.jpg` | 4000 dpi drum scan sample | Stas Wilf | CC BY | [link](https://www.flickr.com/photos/38629276@N06/5973210179) |
 | `home-essay-seed.jpg` | red heart laser cut box | jared | CC BY | [link](https://www.flickr.com/photos/35468148654@N01/4794928671) |
-| `home-essay-harvest.jpg` | Ugali, the staple food in East Africa | Collins kimeli | CC BY-SA | [link](https://commons.wikimedia.org/w/index.php?curid=76656946) |
+| `home-maize-harvest.jpg` | Local upload (maize harvest portrait) | — | — | — |
 | `home-impact-market.jpg` | After the Market, Ethiopia | Rod Waddington | CC BY-SA | [link](https://www.flickr.com/photos/64607715@N05/14503228657) |
 | `home-cta-farmland.jpg` | Kwazulu-Natal, Eastern Cape, South Africa. | H Dragon | CC BY | [link](https://www.flickr.com/photos/81427512@N00/2655972761) |
 | `advisor-hero-seedlings.jpg` | Naaba Apiniyela learns forestry skills | TREEAID | CC BY | [link](https://www.flickr.com/photos/53871588@N05/5384141846) |
@@ -33,7 +33,8 @@ Sourced via [Openverse](https://openverse.org) and
 | `surveillance-scouting.jpg` | 20210717-APHIS-LSC-0887 | USDAgov | Public Domain Mark | [link](https://www.flickr.com/photos/41284017@N08/51340755816) |
 | `surveillance-phone-field.jpg` | 20190828-NRCS-LSC-0007 | USDAgov | Public Domain Mark | [link](https://www.flickr.com/photos/41284017@N08/49392119033) |
 | `surveillance-cassava.jpg` | Cassava plant (Manihot esculenta) | Philipola | CC0 1.0 | [link](https://commons.wikimedia.org/w/index.php?curid=146547871) |
-| `home_agronomist_network.jpg` | Woman carrying toddler at back while planting | Annie Spratt | Unsplash License | [link](https://unsplash.com/photos/woman-carrying-toddler-at-back-while-planting-2INKkSrEmc8) |
+| `home-maize-harvest.jpg` | Local upload — CropX co-founder Oghenekevwe Emadago | — | — | — |
+| `agronomist-field-laptop.jpg` | Local upload — CropX co-founder Oghenekevwe Emadago | — | — | — |
 | `agronomist-training.jpg` | Training women farmers on climate smart innovations in Nyando, Kenya | CGIAR Climate | CC BY | [link](https://www.flickr.com/photos/55227776@N04/9417196732) |
 | `agronomist-soil-test.jpg` | Mars Rovers | Idaho National Laboratory | CC BY | [link](https://www.flickr.com/photos/30369883@N03/4636448856) |
 | `agronomist-field-demo.jpg` | 20140918-NRCS-LSC-0300 | USDAgov | Public Domain Mark | [link](https://www.flickr.com/photos/41284017@N08/15288092801) |

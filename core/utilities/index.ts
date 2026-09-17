@@ -149,17 +149,17 @@ export const howItWorksSteps = [
     label: 'Step one',
     heading: 'Describe the farm',
     body: 'State, soil type, the crop you plan to grow, and how much land you are planting. No account, no personal details, nothing stored.',
-    slot: 'home-essay-farmer' as const,
-    aspect: '3 / 4',
-    objectPosition: 'center 18%',
+    slot: 'home-essay-harvest' as const,
+    aspect: '1 / 1',
+    objectPosition: 'center 20%',
   },
   {
     label: 'Step two',
     heading: 'Locate it in a climate',
     body: 'Your state resolves to one of six agro-ecological zones, each with a rainfall range, a growing-season length, and a drought risk profile. This is what turns a general question into a specific one.',
     slot: 'agronomist-hero-extension' as const,
-    aspect: '16 / 11',
-    objectPosition: 'center 35%',
+    aspect: '4 / 3',
+    objectPosition: 'center 30%',
   },
   {
     label: 'Step three',
@@ -185,7 +185,7 @@ export const solutionCards = [
     description:
       'The core food-security tool: rank drought- and climate-resilient varieties for your state, soil, and crop — with the reasoning shown.',
     href: '/seed-advisor',
-    slot: 'advisor-hero-seedlings' as const,
+    slot: 'home-essay-harvest' as const,
   },
   {
     title: 'Climate Insights',
