@@ -29,7 +29,7 @@ export default function HomePage() {
 
       <RecognitionBand />
 
-      <FounderBand />
+      {/* <FounderBand /> */}
 
       <Box component="section" py="var(--cropx-section-py)" bg="white">
         <Container size="xl" px={20}>
@@ -37,12 +37,12 @@ export default function HomePage() {
             <SectionHeader title="Why choose CropX?" />
             <Text style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75, color: 'var(--cropx-muted)' }}>
               Most farmers are still planting seed bred for a climate that no longer exists. Across
-              the Sahel and the savanna, rains start later, stop earlier, and break mid-season more
-              often than a generation ago — and a failed harvest is a food-security problem, not
+              the Sahel and the savanna, rains start later, stop earlier, and break mid season more
+              often than a generation ago, and a failed harvest is a food security problem, not
               only a yield problem.
             </Text>
             <Text style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75, color: 'var(--cropx-muted)' }}>
-              Research institutes have already released drought- and heat-resilient varieties.
+              Research institutes have already released drought and heat resilient varieties.
               CropX closes the gap between that science and the farm gate: {brand.valueProp}
             </Text>
             <Box
@@ -62,7 +62,7 @@ export default function HomePage() {
                   color: 'var(--cropx-ink)',
                 }}
               >
-                “Match the variety to the season that is actually coming — not the one that used to
+                “Match the variety to the season that is actually coming, not the one that used to
                 come.”
               </Text>
               <Text size="sm" c="dimmed" mt="sm">
@@ -83,7 +83,7 @@ export default function HomePage() {
             beforeSlot="home-before-drought-maize"
             afterSlot="home-after-healthy-maize"
             beforeLabel="Poorly matched variety"
-            afterLabel="Climate-matched variety"
+            afterLabel="Climate matched variety"
             title="Not all seed fails the same way"
             caption="Drag to compare. Both fields faced the same season. The difference is whether the variety could finish inside the water that was actually available. Photographs are illustrative rather than a documented trial pair."
           />
@@ -92,19 +92,19 @@ export default function HomePage() {
 
       <ProcessTimeline
         title="How a shortlist is built"
-        intro="Four steps from farm conditions to a climate-fit variety ranking — no account, no data stored, and the reasoning shown for every match."
+        intro="Four steps from farm conditions to a climate fit variety ranking: no account, no data stored, and the reasoning shown for every match."
         steps={howItWorksSteps}
       />
 
-      <SolutionGrid
+      {/* <SolutionGrid
         title="Seed choice is the start of food security work"
-        description="Four tools around the planting decision — climate context, pest pressure, and human advisory — with the Seed Advisor at the centre."
+        description="Four tools around the planting decision: climate context, pest pressure, and human advisory, with the Seed Advisor at the centre."
         solutions={solutionCards}
-      />
+      /> */}
 
       <ImpactGrid
         title="What we are building toward"
-        description="A practical path from location to a climate-resilient variety shortlist that protects yield under warming conditions."
+        description="A practical path from location to a climate resilient variety shortlist that protects yield under warming conditions."
         metrics={impactGridMetrics}
       />
 
@@ -112,7 +112,7 @@ export default function HomePage() {
 
       <CtaBand
         title="Protect next season’s harvest"
-        description="Four questions, no account, and a ranked shortlist of drought- and climate-resilient varieties for your farm."
+        description="Four questions, no account, and a ranked shortlist of drought and climate resilient varieties for your farm."
         buttonLabel={brand.ctaAdvisorOpen}
       />
     </Box>

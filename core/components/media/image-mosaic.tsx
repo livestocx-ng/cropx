@@ -32,7 +32,7 @@ export function ImageMosaic({ slots }: ImageMosaicProps) {
             slot={feature}
             fill
             sizes="(max-width: 768px) 100vw, 40vw"
-            showCredit
+
             className="mosaic-media-img"
           />
         </Box>
@@ -56,7 +56,7 @@ export function ImageMosaic({ slots }: ImageMosaicProps) {
                   slot={slot}
                   fill
                   sizes="(max-width: 768px) 100vw, 30vw"
-                  showCredit
+
                   className="mosaic-media-img"
                 />
               </Box>

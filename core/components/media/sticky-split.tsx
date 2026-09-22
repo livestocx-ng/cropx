@@ -71,7 +71,7 @@ export function StickySplit({ eyebrow, title, intro, steps }: StickySplitProps) 
                     slot={step.slot}
                     fill
                     sizes="(max-width: 768px) 100vw, 55vw"
-                    showCredit
+
                   />
                 </Box>
 

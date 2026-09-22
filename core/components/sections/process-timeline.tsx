@@ -110,7 +110,7 @@ export function ProcessTimeline({ steps, title, intro }: ProcessTimelineProps) {
                       slot={step.slot}
                       fill
                       sizes="(max-width: 768px) 100vw, 60vw"
-                      showCredit
+
                       className="process-media-img"
                       style={
                         step.objectPosition

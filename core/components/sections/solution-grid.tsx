@@ -12,6 +12,8 @@ export interface SolutionCard {
   description: string;
   href: string;
   slot: ImageSlot;
+  /** Live tools vs roadmap concepts — keep Planned honest on the home grid. */
+  status?: 'live' | 'planned';
 }
 
 interface SolutionGridProps {
@@ -89,6 +91,9 @@ function SolutionTile({
   solution: SolutionCard;
   featured?: boolean;
 }) {
+  const status = solution.status ?? 'live';
+  const statusLabel = status === 'planned' ? 'Planned' : 'Live preview';
+
   return (
     <Link
       href={solution.href}
@@ -119,6 +124,14 @@ function SolutionTile({
         </Box>
 
         <Stack gap={6} maw={featured ? 560 : undefined}>
+          <Text
+            size="xs"
+            fw={700}
+            c={status === 'planned' ? 'dimmed' : 'primary.7'}
+            style={{ letterSpacing: '0.06em', textTransform: 'uppercase' }}
+          >
+            {statusLabel}
+          </Text>
           <Title
             order={3}
             style={{

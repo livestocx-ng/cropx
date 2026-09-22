@@ -47,7 +47,7 @@ export default function ContactPage() {
         align="center"
         eyebrow="Contact"
         title="Get in touch"
-        description="Questions about climate-resilient variety recommendations, partnering as an agronomist, or the data behind the advisor."
+        description="Questions about climate resilient variety recommendations, partnering as an agronomist, or the data behind the advisor."
       />
 
       <Box py="var(--cropx-section-py)" style={{ backgroundColor: 'var(--cropx-cream)' }}>

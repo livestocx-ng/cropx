@@ -6,7 +6,9 @@ export interface CrisisStat {
   label: string;
   body: string;
   category: string;
-  source?: string;
+  /** Required for grant-facing honesty — cite or mark as pending. */
+  source: string;
+  sourceUrl?: string;
 }
 
 interface CrisisStatBoardProps {
@@ -65,11 +67,20 @@ export function CrisisStatBoard({
                   <Text size="sm" style={{ lineHeight: 1.65, color: 'var(--cropx-muted)' }}>
                     {stat.body}
                   </Text>
-                  {stat.source && (
-                    <Text size="xs" c="dimmed">
-                      {stat.source}
-                    </Text>
-                  )}
+                  <Text size="xs" c="dimmed" style={{ lineHeight: 1.45 }}>
+                    {stat.sourceUrl ? (
+                      <a
+                        href={stat.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        style={{ color: 'inherit' }}
+                      >
+                        {stat.source}
+                      </a>
+                    ) : (
+                      stat.source
+                    )}
+                  </Text>
                 </Stack>
               </GridCol>
             ))}

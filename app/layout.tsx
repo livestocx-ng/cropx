@@ -11,7 +11,7 @@ import { theme } from '@/core/themes';
 import { buildMetadata, SITE_DESCRIPTION } from '@/core/utils/metadata';
 
 export const metadata = buildMetadata(
-  'Climate-Resilient Seed Selection',
+  'Climate Resilient Seed Selection',
   SITE_DESCRIPTION
 );
 

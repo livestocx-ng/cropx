@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { IconMail, IconMapPin, IconPhone, IconSeeding } from '@tabler/icons-react';
+import { IconMail, IconMapPin, IconPhone } from '@tabler/icons-react';
 import {
   Anchor,
   Box,
@@ -10,9 +10,8 @@ import {
   Group,
   Stack,
   Text,
-  ThemeIcon,
-  Title,
 } from '@mantine/core';
+import { BrandMark } from '@/core/components/brand/brand-mark';
 import { brand } from '@/core/content/brand';
 import { contactChannels } from '@/core/utilities';
 
@@ -40,23 +39,14 @@ export function Footer() {
           <Grid gutter={{ base: 'xl', md: 48 }}>
             <GridCol span={{ base: 12, md: 4 }}>
               <Stack gap="lg">
-                <Flex align="center" gap="sm">
-                  <ThemeIcon size={36} radius="md" variant="light" color="accent">
-                    <IconSeeding size={20} />
-                  </ThemeIcon>
-                  <Title
-                    order={3}
-                    c="white"
-                    style={{ fontFamily: 'var(--cropx-font-heading)', letterSpacing: '-0.02em' }}
-                  >
-                    CropX
-                  </Title>
-                </Flex>
+                <Link href="/" style={{ textDecoration: 'none', width: 'fit-content' }} aria-label="CropX home">
+                  <BrandMark inverted size={36} />
+                </Link>
                 <Text size="sm" c="gray.4" style={{ maxWidth: 340, lineHeight: 1.7 }}>
                   {brand.missionShort}
                 </Text>
                 <Text size="sm" c="gray.5" style={{ maxWidth: 340, lineHeight: 1.65 }}>
-                  Climate-fit seed choice for African farms — so more harvests still yield.
+                  Climate fit seed choice for African farms, so more harvests still yield.
                 </Text>
 
                 <Stack gap="sm">

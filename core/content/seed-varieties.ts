@@ -11,10 +11,10 @@ import { CropType, SeedVariety } from '@/core/types';
  * The `droughtToleranceScore` and `heatToleranceScore` values are NOT published
  * trial figures. They are composite estimates written for this demo so the
  * ranking has something defensible to sort on. Yield ranges are indicative
- * on-farm figures under good management, not trial-station maxima.
+ * on farm figures under good management, not trial station maxima.
  *
  * Before this powers real planting advice, these fields must be replaced with
- * measured data from multi-location trials.
+ * measured data from multi location trials.
  */
 
 export const seedVarieties: SeedVariety[] = [
@@ -30,9 +30,9 @@ export const seedVarieties: SeedVariety[] = [
     suitableSoils: ['SANDY', 'SANDY_LOAM', 'LOAM'],
     agroZones: ['SAHEL', 'SUDAN_SAVANNA'],
     breeder: 'IAR Zaria with IITA',
-    traits: ['Extra-early maturing', 'Drought escape', 'Striga tolerant'],
+    traits: ['Extra early maturing', 'Drought escape', 'Striga tolerant'],
     notes:
-      'An extra-early open-pollinated variety bred to complete its cycle inside a short, unreliable rainy season. The main drought strategy here is escape rather than endurance: it finishes before the rains do.',
+      'An extra early open pollinated variety bred to complete its cycle inside a short, unreliable rainy season. The main drought strategy here is escape rather than endurance: it finishes before the rains do.',
   },
   {
     id: 'maize-sammaz-15',
@@ -62,7 +62,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'IITA',
     traits: ['Drought tolerant', 'Striga resistant', 'White grain'],
     notes:
-      'Selected over four cycles explicitly for performance under managed drought stress. Holds grain filling through mid-season dry spells better than varieties bred only for escape.',
+      'Selected over four cycles explicitly for performance under managed drought stress. Holds grain filling through mid season dry spells better than varieties bred only for escape.',
   },
   {
     id: 'maize-sammaz-52',
@@ -92,7 +92,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'Premier Seed Nigeria',
     traits: ['Hybrid', 'High yield potential', 'Good husk cover'],
     notes:
-      'A high-ceiling hybrid that rewards fertiliser and reliable rain, and punishes both their absence. Seed must be bought fresh each season rather than saved.',
+      'A high ceiling hybrid that rewards fertiliser and reliable rain, and punishes both their absence. Seed must be bought fresh each season rather than saved.',
   },
   {
     id: 'maize-evdt-w-str',
@@ -105,9 +105,9 @@ export const seedVarieties: SeedVariety[] = [
     suitableSoils: ['SANDY', 'SANDY_LOAM', 'LOAM'],
     agroZones: ['SAHEL', 'SUDAN_SAVANNA'],
     breeder: 'IITA',
-    traits: ['Extra-early', 'Drought tolerant', 'Striga resistant'],
+    traits: ['Extra early', 'Drought tolerant', 'Striga resistant'],
     notes:
-      'An extra-early drought-tolerant population combining escape with genuine stress tolerance. A common choice for late planting when the rains arrive weeks behind schedule.',
+      'An extra early drought tolerant population combining escape with genuine stress tolerance. A common choice for late planting when the rains arrive weeks behind schedule.',
   },
 
   // -------------------------------------------------------------- SORGHUM
@@ -139,7 +139,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'IAR Zaria',
     traits: ['Drought tolerant', 'Dual purpose grain and fodder'],
     notes:
-      'Produces usable stover alongside grain, which matters on mixed crop and livestock farms where dry-season feed is as scarce as food.',
+      'Produces usable stover alongside grain, which matters on mixed crop and livestock farms where dry season feed is as scarce as food.',
   },
   {
     id: 'sorghum-samsorg-17',
@@ -154,7 +154,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'IAR Zaria',
     traits: ['Medium maturing', 'Kaura type', 'Preferred grain colour'],
     notes:
-      'A Kaura-type sorghum whose grain commands a market premium in northern Nigeria. Needs a longer season than the extra-early releases.',
+      'A Kaura type sorghum whose grain commands a market premium in northern Nigeria. Needs a longer season than the extra early releases.',
   },
   {
     id: 'sorghum-samsorg-40',
@@ -169,7 +169,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'IAR Zaria',
     traits: ['Early maturing', 'Striga resistant'],
     notes:
-      'An early release for the driest cropping margins, where the season is too short for medium-maturing types in most years.',
+      'An early release for the driest cropping margins, where the season is too short for medium maturing types in most years.',
   },
 
   // --------------------------------------------------------------- MILLET
@@ -186,7 +186,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'ICRISAT with LCRI Maiduguri',
     traits: ['Extreme drought tolerance', 'Downy mildew tolerant', 'Sandy soil adapted'],
     notes:
-      'Pearl millet is the most drought-hardy cereal available to Sahelian farmers, and this variety is among the most widely adopted. It yields on sandy soils where nothing else will.',
+      'Pearl millet is the most drought hardy cereal available to Sahelian farmers, and this variety is among the most widely adopted. It yields on sandy soils where nothing else will.',
   },
   {
     id: 'millet-super-sosat',
@@ -308,9 +308,9 @@ export const seedVarieties: SeedVariety[] = [
     suitableSoils: ['SANDY', 'SANDY_LOAM'],
     agroZones: ['SAHEL', 'SUDAN_SAVANNA'],
     breeder: 'IITA',
-    traits: ['Extra-early', 'Striga resistant', 'Drought tolerant'],
+    traits: ['Extra early', 'Striga resistant', 'Drought tolerant'],
     notes:
-      'An extra-early line with strong striga resistance, suited to the shortest seasons and the most degraded land.',
+      'An extra early line with strong striga resistance, suited to the shortest seasons and the most degraded land.',
   },
 
   // ------------------------------------------------------------ GROUNDNUT
@@ -342,7 +342,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'IAR Zaria',
     traits: ['Rosette resistant', 'Good shelling percentage'],
     notes:
-      'A dependable rosette-resistant release with strong shelling out-turn, which is what actually determines the value a trader will pay.',
+      'A dependable rosette resistant release with strong shelling outturn, which is what actually determines the value a trader will pay.',
   },
   {
     id: 'groundnut-samnut-25',
@@ -357,7 +357,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'IAR Zaria with ICRISAT',
     traits: ['Early maturing', 'Rosette resistant', 'Drought escape'],
     notes:
-      'The earliest of the improved SAMNUT series, bred for the dry margins where a hundred-day crop is a gamble.',
+      'The earliest of the improved SAMNUT series, bred for the dry margins where a hundred day crop is a gamble.',
   },
 
   // -------------------------------------------------------------- CASSAVA
@@ -374,7 +374,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'IITA',
     traits: ['High dry matter', 'Mosaic tolerant', 'Industry preferred'],
     notes:
-      'The workhorse of Nigerian cassava processing, favoured for high dry matter and strong garri out-turn. Cassava tolerates drought by simply waiting, which is why it anchors food security in a bad year.',
+      'The workhorse of Nigerian cassava processing, favoured for high dry matter and strong garri outturn. Cassava tolerates drought by simply waiting, which is why it anchors food security in a bad year.',
   },
   {
     id: 'cassava-tms-070337',
@@ -389,7 +389,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'IITA with NRCRI Umudike',
     traits: ['Very high yielding', 'Mosaic resistant', 'Early bulking'],
     notes:
-      'One of the highest-yielding releases available, with early bulking that lets a farmer harvest sooner if cash or food is needed.',
+      'One of the highest yielding releases available, with early bulking that lets a farmer harvest sooner if cash or food is needed.',
   },
   {
     id: 'cassava-tms-980505',
@@ -404,7 +404,7 @@ export const seedVarieties: SeedVariety[] = [
     breeder: 'IITA',
     traits: ['High starch', 'Mosaic resistant', 'Good ground cover'],
     notes:
-      'A high-starch variety favoured by industrial starch buyers, with canopy architecture that suppresses weeds well.',
+      'A high starch variety favoured by industrial starch buyers, with canopy architecture that suppresses weeds well.',
   },
   {
     id: 'cassava-tms-011368',

@@ -65,8 +65,9 @@ Attribution requirements are recorded in `public/images/cropx/CREDITS.md` and re
 
 These are intentionally left as placeholders:
 
-- **Logo and favicon** — navbar uses a temporary `IconSeeding` wordmark
+- **Final logo** — interim mark at `public/brand/cropx-mark.svg` (nav/footer + `app/icon.svg`)
 - **Team section** — hidden (`showTeamSection = false` in `core/utilities/index.ts`)
 - **Testimonials** — hidden (`showTestimonials = false` in `core/content/testimonials.ts`)
-- **Open Graph image** — add `public/og/cropx-og.jpg` and wire it in `core/utils/metadata.ts`
+- **Partner relationships** — logo strip uses ecosystem wording; classify `Sponsors[].relationship` when confirmed
+- **Crisis stat citations** — figures show sources; replace “citation pending” with real references
 - **Legal review** — privacy policy and terms are drafts, not lawyer-reviewed

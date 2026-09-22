@@ -3,7 +3,7 @@ import { AgroZone, ZoneProfile } from '@/core/types';
 /**
  * Nigeria's six broad agro-ecological zones, ordered driest to wettest.
  *
- * Rainfall and season figures are long-term averages drawn from the standard
+ * Rainfall and season figures are long term averages drawn from the standard
  * agro-ecological classification used by Nigerian agricultural research
  * institutes. They describe a zone, not a field: local variation is large.
  */
@@ -16,7 +16,7 @@ export const zoneProfiles: Record<AgroZone, ZoneProfile> = {
     peakTempC: 40,
     droughtRisk: 'VERY_HIGH',
     summary:
-      'A single short rainy season with high year-to-year variability. Only extra-early and early varieties reliably complete their cycle before the rains withdraw.',
+      'A single short rainy season with high year to year variability. Only extra early and early varieties reliably complete their cycle before the rains withdraw.',
   },
   SUDAN_SAVANNA: {
     zone: 'SUDAN_SAVANNA',
@@ -26,7 +26,7 @@ export const zoneProfiles: Record<AgroZone, ZoneProfile> = {
     peakTempC: 39,
     droughtRisk: 'HIGH',
     summary:
-      'Nigeria\'s cereal and legume belt. Rain is adequate in a good year but mid-season dry spells and a sharp end to the rains make maturity timing critical.',
+      'Nigeria\'s cereal and legume belt. Rain is adequate in a good year but mid season dry spells and a sharp end to the rains make maturity timing critical.',
   },
   NORTHERN_GUINEA: {
     zone: 'NORTHERN_GUINEA',
@@ -36,7 +36,7 @@ export const zoneProfiles: Record<AgroZone, ZoneProfile> = {
     peakTempC: 36,
     droughtRisk: 'MODERATE',
     summary:
-      'The most productive cereal zone in the country. A long enough season for medium-maturing varieties, with drought tolerance still valuable as insurance.',
+      'The most productive cereal zone in the country. A long enough season for medium maturing varieties, with drought tolerance still valuable as insurance.',
   },
   SOUTHERN_GUINEA: {
     zone: 'SOUTHERN_GUINEA',
@@ -46,7 +46,7 @@ export const zoneProfiles: Record<AgroZone, ZoneProfile> = {
     peakTempC: 34,
     droughtRisk: 'MODERATE',
     summary:
-      'A long, largely reliable season supporting roots, tubers, and late-maturing cereals. Drought pressure is episodic rather than structural.',
+      'A long, largely reliable season supporting roots, tubers, and late maturing cereals. Drought pressure is episodic rather than structural.',
   },
   DERIVED_SAVANNA: {
     zone: 'DERIVED_SAVANNA',
@@ -76,7 +76,7 @@ export const zoneProfiles: Record<AgroZone, ZoneProfile> = {
  * Several large states genuinely span two zones. Niger, Kaduna, Borno, and
  * Taraba are the clearest cases. Each is mapped to the zone covering most of
  * its cropped area, and the advisor surfaces this as a caveat rather than
- * pretending state-level resolution is field-level resolution.
+ * pretending state level resolution is field level resolution.
  */
 export const stateToZone: Record<string, AgroZone> = {
   Borno: 'SAHEL',

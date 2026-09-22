@@ -63,7 +63,7 @@ export function PhotoEssay({ panels, columns = 3, title, intro }: PhotoEssayProp
                 slot={panel.slot}
                 fill
                 sizes={`(max-width: 768px) 100vw, ${Math.round(100 / columns)}vw`}
-                showCredit
+
                 className="essay-media-img"
               />
             </Box>

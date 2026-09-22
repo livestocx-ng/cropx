@@ -12,7 +12,6 @@ import { ImageMosaic } from '@/core/components/media';
 import { BenefitFeatures } from '@/core/components/sections/benefit-features';
 import { CtaBand } from '@/core/components/sections/cta-band';
 import { HeroSplit } from '@/core/components/sections/hero-split';
-import { LogoStrip } from '@/core/components/sections/logo-strip';
 import { SectionHeader } from '@/core/components/sections/section-header';
 import { brand } from '@/core/content/brand';
 import { platformFaqs, showTeamSection, teamMembers } from '@/core/utilities';
@@ -46,8 +45,6 @@ export default function AboutPage() {
         description={brand.missionFull}
       />
 
-      <LogoStrip />
-
       <Box component="section" py="var(--cropx-section-py)" bg="white">
         <Container size="xl" px={20}>
           <Stack gap={48}>
@@ -56,18 +53,18 @@ export default function AboutPage() {
               <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
                 Institutes including IAR Zaria, IITA, NCRI and NRCRI have spent decades breeding
                 crop varieties for exactly the conditions African farmers now face: shorter
-                seasons, mid-season dry spells, higher temperatures, and heavy pest pressure. Those
+                seasons, mid season dry spells, higher temperatures, and heavy pest pressure. Those
                 varieties exist. Many are certified and available.
               </Text>
               <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
                 What does not exist, for most farmers, is a way to find out which of them suits a
                 particular field. So the default is to plant what was planted last year, in a
-                climate that is no longer last year&rsquo;s climate — and food security pays the
+                climate that is no longer last year&rsquo;s climate, and food security pays the
                 price when the harvest fails.
               </Text>
               <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
                 CropX is an attempt to make that decision legible: to take a location, a soil, and
-                a crop, and return a shortlist of drought- and climate-resilient varieties with the
+                a crop, and return a shortlist of drought and climate resilient varieties with the
                 reasoning attached. Not to sell seed, and not to replace the agronomists who do the
                 work that software cannot.
               </Text>
@@ -154,7 +151,7 @@ export default function AboutPage() {
 
       <CtaBand
         title={brand.ctaAdvisorOpen}
-        description="Four questions about your farm, and a ranked shortlist of climate-resilient varieties."
+        description="Four questions about your farm, and a ranked shortlist of climate resilient varieties."
         buttonLabel={brand.ctaAdvisorOpen}
       />
     </Box>

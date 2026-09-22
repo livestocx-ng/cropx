@@ -16,8 +16,8 @@ interface BenefitFeaturesProps {
 /** Three benefit cards with green BENEFIT chips — Girlified “Next Generation” pattern. */
 export function BenefitFeatures({
   features,
-  title = 'Climate-fit seed choice, explained',
-  description = 'Three things every recommendation is built on — zone climate, resilience ranking, and reasoning you can read.',
+  title = 'Climate fit seed choice, explained',
+  description = 'Three things every recommendation is built on: zone climate, resilience ranking, and reasoning you can read.',
 }: BenefitFeaturesProps) {
   return (
     <Box component="section" py="var(--cropx-section-py)" bg="white">

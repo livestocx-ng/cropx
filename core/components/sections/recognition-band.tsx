@@ -12,7 +12,7 @@ interface RecognitionBandProps {
 
 /** Short partner / mission highlight — Girlified “Global Recognition” band. */
 export function RecognitionBand({
-  title = 'Built for climate-resilient planting decisions',
+  title = 'Built for climate resilient planting decisions',
   description = brand.missionFull,
   href = '/about-us',
   linkLabel = 'Read our mission',

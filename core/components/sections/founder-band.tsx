@@ -11,9 +11,9 @@ interface FounderBandProps {
 
 /** Early home spotlight — founder in the field, not a generic stock band. */
 export function FounderBand({
-  name = 'Oghenekevwe Emadago',
-  role = 'Co-founder / CEO',
-  quote = 'CropX is built from the farm gate outward — matching varieties to the season that is actually coming.',
+  name = 'Idokoh Divine Ojochide',
+  role = 'Cofounder / CEO',
+  quote = 'CropX is built from the farm gate outward, matching varieties to the season that is actually coming.',
 }: FounderBandProps) {
   return (
     <Box

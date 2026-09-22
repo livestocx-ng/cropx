@@ -17,7 +17,7 @@ const SURVEILLANCE_BENEFITS = [
   },
   {
     title: 'Frass in the whorl',
-    body: 'Moist, sawdust-like droppings packed into the leaf whorl. Often clearer than the damage itself, and a reliable sign larvae are still present.',
+    body: 'Moist, sawdust like droppings packed into the leaf whorl. Often clearer than the damage itself, and a reliable sign larvae are still present.',
     benefit: 'Clear field signal before canopy loss',
   },
   {
@@ -49,7 +49,7 @@ const SURVEILLANCE_STEPS = [
   {
     label: 'Step four',
     heading: 'Warn the farms downwind',
-    body: 'Once a pattern is clear across a district, neighbouring farms can scout sooner and act earlier — protecting harvests that started with a climate-fit variety.',
+    body: 'Once a pattern is clear across a district, neighbouring farms can scout sooner and act earlier, protecting harvests that started with a climate fit variety.',
     slot: 'surveillance-cassava' as const,
   },
 ];
@@ -61,10 +61,10 @@ export default function CropSurveillancePage() {
         asH1
         eyebrow="Crop Surveillance"
         title="The right seed still loses to an outbreak nobody saw coming"
-        description="Pest and disease pressure can erase a climate-resilient variety before harvest. Pooling what farmers observe turns scattered damage into an early warning while there is still time to act."
+        description="Pest and disease pressure can erase a climate resilient variety before harvest. Pooling what farmers observe turns scattered damage into an early warning while there is still time to act."
         visual={
           <Box style={{ position: 'relative', aspectRatio: '5 / 4' }}>
-            <ManagedImage slot="surveillance-hero-pest" fill sizes="(max-width: 768px) 100vw, 50vw" showCredit />
+            <ManagedImage slot="surveillance-hero-pest" fill sizes="(max-width: 768px) 100vw, 50vw" />
           </Box>
         }
       >
@@ -89,7 +89,7 @@ export default function CropSurveillancePage() {
               Fall armyworm has been established across sub-Saharan Africa since 2016 and is now
               a permanent feature of maize production. Caught in the first days of feeding it is
               manageable. Once larvae are large and sheltered deep in the whorl, the field is
-              largely lost — and so is the food that planting season was meant to produce.
+              largely lost, and so is the food that planting season was meant to produce.
             </Text>
             <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
               The difference between those two states is often less than a week of looking.
@@ -105,7 +105,7 @@ export default function CropSurveillancePage() {
       />
 
       <ProcessTimeline
-        title="A district-level picture built from field-level observation"
+        title="A district level picture built from field level observation"
         intro="None of this requires new hardware. It requires a way for what a farmer already sees to reach the people who can act on it."
         steps={SURVEILLANCE_STEPS}
       />
@@ -115,7 +115,7 @@ export default function CropSurveillancePage() {
           <PhotoEssay
             columns={2}
             title="Resistance is a seed decision, not just a spray decision"
-            intro="Several varieties CropX recommends carry genetic resistance to the pest or disease that most threatens their crop — another layer of food-security insurance after climate fit."
+            intro="Several varieties CropX recommends carry genetic resistance to the pest or disease that most threatens their crop: another layer of food security insurance after climate fit."
             panels={[
               {
                 slot: 'surveillance-leaf-disease',
@@ -147,7 +147,7 @@ export default function CropSurveillancePage() {
 
       <CtaBand
         title="Find varieties with resistance traits"
-        description="Start with climate-fit seed — including options that carry genetic resistance where it matters most."
+        description="Start with climate fit seed, including options that carry genetic resistance where it matters most."
         buttonLabel={brand.ctaAdvisor}
       />
     </Box>

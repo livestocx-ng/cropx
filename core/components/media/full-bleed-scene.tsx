@@ -1,8 +1,8 @@
 'use client';
 
 import { Badge, Box, Container, Stack, Text, Title, rem, useMantineTheme } from '@mantine/core';
-import { image, ImageSlot } from '@/core/content/image-manifest';
-import { ImageCredit, ManagedImage } from './managed-image';
+import { ImageSlot } from '@/core/content/image-manifest';
+import { ManagedImage } from './managed-image';
 
 interface FullBleedSceneProps {
   slot: ImageSlot;
@@ -44,7 +44,6 @@ export function FullBleedScene({
   asH1 = false,
 }: FullBleedSceneProps) {
   const theme = useMantineTheme();
-  const entry = image(slot);
   const size = HEIGHTS[height];
   const centred = align === 'centre';
 
@@ -116,8 +115,6 @@ export function FullBleedScene({
           {children}
         </Stack>
       </Container>
-
-      {entry.credit && <ImageCredit credit={entry.credit} url={entry.creditUrl} />}
     </Box>
   );
 }

@@ -91,7 +91,7 @@ export default function TermsOfServicePage() {
             </List>
           </Section>
 
-          <Section title="Photographs and third-party content">
+          <Section title="Photographs and third party content">
             <Text style={{ lineHeight: 1.8 }}>
               Photographs on this site are used under open licences and remain the property of
               their creators, credited on the{' '}

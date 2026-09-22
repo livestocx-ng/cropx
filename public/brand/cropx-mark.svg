@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <!-- Interim CropX mark: seedling glyph. Replace when final logo arrives. -->
+  <rect width="32" height="32" rx="8" fill="#1B6B3A"/>
+  <path
+    d="M16 24.5V14.5M16 14.5C16 14.5 12.5 14.2 10.2 11.5C8.2 9.2 8 6.5 8 6.5C11.8 6.8 14.2 8.5 16 10.8C17.8 8.5 20.2 6.8 24 6.5C24 6.5 23.8 9.2 21.8 11.5C19.5 14.2 16 14.5 16 14.5Z"
+    stroke="#F4F7F4"
+    stroke-width="1.75"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="16" cy="25.25" r="1.25" fill="#C4E0A8"/>
+</svg>

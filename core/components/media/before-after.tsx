@@ -233,7 +233,7 @@ function StaticPane({
           borderRadius: 8,
         }}
       >
-        <ManagedImage slot={slot} fill sizes="(max-width: 768px) 100vw, 50vw" showCredit />
+        <ManagedImage slot={slot} fill sizes="(max-width: 768px) 100vw, 50vw" />
       </Box>
       <Text size="sm" fw={600} c={accent ? 'primary.7' : 'dark.6'}>
         {label}

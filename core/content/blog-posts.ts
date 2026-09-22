@@ -23,9 +23,9 @@ export const blogPosts: BlogPost[] = [
 
 ## Escape versus endurance
 
-**Drought escape** means finishing early. An extra-early maize such as SAMMAZ 16 from IAR Zaria matures in around 80 days. It does not withstand drought so much as sidestep it, completing grain fill before the rains withdraw. In the Sahel Savanna, where the reliable window is 75 to 90 days, this is often the only workable approach.
+**Drought escape** means finishing early. An extra early maize such as SAMMAZ 16 from IAR Zaria matures in around 80 days. It does not withstand drought so much as sidestep it, completing grain fill before the rains withdraw. In the Sahel Savanna, where the reliable window is 75 to 90 days, this is often the only workable approach.
 
-**Drought endurance** means holding on. Varieties selected under managed drought stress, such as IITA's TZE-W DT STR populations, keep filling grain through a mid-season dry spell that would abort the ears of a less tolerant variety. This matters where the season is long enough but unreliable in the middle.
+**Drought endurance** means holding on. Varieties selected under managed drought stress, such as IITA's TZE-W DT STR populations, keep filling grain through a mid season dry spell that would abort the ears of a less tolerant variety. This matters where the season is long enough but unreliable in the middle.
 
 The two strategies fail in different ways. An escape variety planted in a long season simply leaves yield on the table. An endurance variety planted where the season is too short will not finish at all.
 
@@ -94,7 +94,7 @@ Where you have the labour, splitting planting across two or three dates a week o
 
 ## Match duration to what is left
 
-If the rains arrive three weeks late, the variety you planned for is often no longer the right one. The season has shortened, and a medium-maturing variety may no longer finish. This is exactly when an extra-early variety earns its place, even at a lower yield ceiling. A smaller harvest beats none.
+If the rains arrive three weeks late, the variety you planned for is often no longer the right one. The season has shortened, and a medium maturing variety may no longer finish. This is exactly when an extra early variety earns its place, even at a lower yield ceiling. A smaller harvest beats none.
 
 ## Keep a fallback
 
@@ -116,7 +116,7 @@ Short-duration cowpea, at around 70 to 75 days, can still produce after a failed
 ## What early damage looks like
 
 - Small translucent "windows" in young leaves where larvae have fed through one surface
-- Moist sawdust-like frass in the leaf whorl, which is often the clearest early sign
+- Moist sawdust like frass in the leaf whorl, which is often the clearest early sign
 - Ragged holes with irregular edges, distinct from the neat cuts of other feeders
 
 Late damage is obvious and largely untreatable: the whorl shredded, frass packed in, and larvae too large and too well protected for contact sprays to reach.
@@ -172,7 +172,7 @@ State agricultural development programmes, accredited agro-dealers, and seed com
     readMinutes: 5,
     tags: ['Legumes', 'Soil'],
     cover: 'blog-cowpea-nitrogen',
-    body: `Cowpea rarely gets the attention maize does, which understates its usefulness. It is drought-hardy, quick, edible in several forms, and it improves the soil rather than depleting it.
+    body: `Cowpea rarely gets the attention maize does, which understates its usefulness. It is drought hardy, quick, edible in several forms, and it improves the soil rather than depleting it.
 
 ## Nitrogen, without buying it
 

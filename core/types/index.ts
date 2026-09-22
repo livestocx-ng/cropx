@@ -3,6 +3,8 @@ import type { ImageSlot } from '@/core/content/image-manifest';
 export interface Sponsor {
   name: string;
   image: string;
+  /** How the organisation relates to CropX — default unconfirmed until classified. */
+  relationship: 'programme' | 'accelerator' | 'funder' | 'ecosystem' | 'unconfirmed';
 }
 
 export type CropType =

@@ -34,8 +34,8 @@ const RISK_TEXT: Record<string, string> = {
 
 const CLIMATE_BENEFITS = [
   {
-    title: 'Zone-level rainfall ranges',
-    body: 'Each agro-ecological zone carries a rainfall band and a reliable growing-season length — the climate facts every food-security planting decision rests on.',
+    title: 'Zone level rainfall ranges',
+    body: 'Each agro-ecological zone carries a rainfall band and a reliable growing season length: the climate facts every food security planting decision rests on.',
     benefit: 'Planting advice starts from climate, not habit',
   },
   {
@@ -59,20 +59,20 @@ const CLIMATE_STEPS = [
   },
   {
     label: 'Shift two',
-    heading: 'Mid-season dry spells are more common',
+    heading: 'Mid season dry spells are more common',
     body: 'A two or three week break at flowering does more damage than the same shortfall spread across the season. This is where genuine stress tolerance, as opposed to early maturity, earns its place.',
     slot: 'climate-dry-riverbed' as const,
   },
   {
     label: 'Shift three',
     heading: 'Heat is rising alongside the variability',
-    body: 'Higher night temperatures shorten grain filling and cut yields even when rainfall is adequate. Heat tolerance is becoming a separate requirement rather than a by-product of drought tolerance.',
+    body: 'Higher night temperatures shorten grain filling and cut yields even when rainfall is adequate. Heat tolerance is becoming a separate requirement rather than a byproduct of drought tolerance.',
     slot: 'climate-sahel' as const,
   },
   {
     label: 'Response',
     heading: 'Match duration to the season you now have',
-    body: 'Where irrigation is not an option, the practical response is choosing varieties whose maturity fits the window that actually exists — accepting a lower ceiling in exchange for a harvest you can count on.',
+    body: 'Where irrigation is not an option, the practical response is choosing varieties whose maturity fits the window that actually exists, accepting a lower ceiling in exchange for a harvest you can count on.',
     slot: 'climate-irrigation' as const,
   },
 ];
@@ -84,10 +84,10 @@ export default function ClimateInsightsPage() {
         asH1
         eyebrow="Climate Insights"
         title="You cannot choose seed without knowing the climate you are choosing it for"
-        description="Rainfall totals, season length, and drought risk differ enormously across Nigeria. These are the assumptions every CropX recommendation — and every climate-fit planting decision — rests on."
+        description="Rainfall totals, season length, and drought risk differ enormously across Nigeria. These are the assumptions every CropX recommendation and every climate fit planting decision rests on."
         visual={
           <Box style={{ position: 'relative', aspectRatio: '5 / 4' }}>
-            <ManagedImage slot="climate-hero-drought" fill sizes="(max-width: 768px) 100vw, 50vw" showCredit />
+            <ManagedImage slot="climate-hero-drought" fill sizes="(max-width: 768px) 100vw, 50vw" />
           </Box>
         }
       >
@@ -115,9 +115,9 @@ export default function ClimateInsightsPage() {
           <Stack gap="lg" maw={760}>
             <SectionHeader title="Six zones, one country" />
             <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
-              Nigeria spans from semi-desert in the far north to humid forest on the coast. The
+              Nigeria spans from semi desert in the far north to humid forest on the coast. The
               far north gets under 600mm of rain in a season lasting under three months. The
-              south-east can get five times that across most of the year. Advice that ignores this
+              southeast can get five times that across most of the year. Advice that ignores this
               cannot protect yield or food security.
             </Text>
           </Stack>
@@ -126,7 +126,7 @@ export default function ClimateInsightsPage() {
 
       <BenefitFeatures
         title="What climate data underpins"
-        description="Rainfall, drought risk, and stated assumptions — so every seed recommendation stays auditable."
+        description="Rainfall, drought risk, and stated assumptions, so every seed recommendation stays auditable."
         features={CLIMATE_BENEFITS}
       />
 
@@ -167,7 +167,7 @@ export default function ClimateInsightsPage() {
               </Table>
             </Box>
             <Text size="xs" c="dimmed" style={{ lineHeight: 1.6 }}>
-              Long-term averages from the standard agro-ecological classification used by
+              Long term averages from the standard agro-ecological classification used by
               Nigerian agricultural research institutes. These describe a zone, not a field.
             </Text>
           </Stack>
@@ -176,7 +176,7 @@ export default function ClimateInsightsPage() {
 
       <ProcessTimeline
         title="It is less about totals and more about timing"
-        intro="Annual rainfall figures can look stable while becoming far harder to farm against, because what matters to a crop — and to next season’s food — is when the water arrives."
+        intro="Annual rainfall figures can look stable while becoming far harder to farm against, because what matters to a crop and to next season’s food is when the water arrives."
         steps={CLIMATE_STEPS}
       />
 

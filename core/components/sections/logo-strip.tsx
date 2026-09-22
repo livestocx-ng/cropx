@@ -9,7 +9,7 @@ interface LogoStripProps {
 }
 
 /** Continuous partner marquee — Girlified “Supported & Backed By” pattern. */
-export function LogoStrip({ title = 'Supported & backed by' }: LogoStripProps) {
+export function LogoStrip({ title = 'In the climate & agritech ecosystem' }: LogoStripProps) {
   const loop = [...Sponsors, ...Sponsors];
 
   return (

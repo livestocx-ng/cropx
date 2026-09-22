@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { IconSeeding } from '@tabler/icons-react';
 import {
   Box,
   Burger,
@@ -12,10 +11,9 @@ import {
   Group,
   NavLink,
   Stack,
-  Text,
-  ThemeIcon,
 } from '@mantine/core';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
+import { BrandMark } from '@/core/components/brand/brand-mark';
 import { navLinks } from '@/core/utilities';
 import classes from './navbar.module.css';
 
@@ -62,19 +60,13 @@ export function Navbar() {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 10,
               textDecoration: 'none',
               color: 'inherit',
               flexShrink: 0,
             }}
             aria-label="CropX home"
           >
-            <ThemeIcon size={34} radius="md" color="primary" variant="filled">
-              <IconSeeding size={20} />
-            </ThemeIcon>
-            <Text fw={700} size="lg" style={{ letterSpacing: '-0.02em', fontFamily: 'var(--cropx-font-heading)' }}>
-              CropX
-            </Text>
+            <BrandMark />
           </Link>
 
           <Group gap={8} visibleFrom="lg" justify="center" style={{ flex: 1 }}>
@@ -130,7 +122,7 @@ export function Navbar() {
             mt="md"
             fullWidth
           >
-            Get started — free
+            Get started (free)
           </Button>
         </Stack>
       </Drawer>

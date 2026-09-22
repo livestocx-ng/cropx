@@ -1,4 +1,4 @@
-export { ManagedImage, ImageCredit } from './managed-image';
+export { ManagedImage } from './managed-image';
 export { ScrollReveal } from './scroll-reveal';
 export { FullBleedScene } from './full-bleed-scene';
 export { PhotoEssay } from './photo-essay';

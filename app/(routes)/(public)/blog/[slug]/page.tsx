@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <Container size="md" px={20} py="var(--cropx-section-py-sm)" maw="var(--cropx-reading-max)">
         <Stack gap="xl">
           <Box style={{ position: 'relative', aspectRatio: '16 / 9', borderRadius: 8, overflow: 'hidden' }}>
-            <ManagedImage slot={post.cover} fill sizes="(max-width: 680px) 100vw, 680px" showCredit priority />
+            <ManagedImage slot={post.cover} fill sizes="(max-width: 680px) 100vw, 680px" priority />
           </Box>
 
           <Box

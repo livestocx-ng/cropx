@@ -37,7 +37,7 @@ export function AdvisorPreview({variant = 'default'}: AdvisorPreviewProps) {
 				{embedded && (
 					<Group justify='space-between' align='center'>
 						<Text size='sm' fw={700} c='dark.7'>
-							Climate-fit ranking
+							Climate fit ranking
 						</Text>
 						<Text size='xs' c='dimmed' fw={600}>
 							Maize · Katsina

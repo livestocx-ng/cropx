@@ -14,7 +14,7 @@ export const testimonials: Testimonial[] = [
     role: 'Maize farmer',
     location: 'Kaduna State',
     quote:
-      'The rains came three weeks late. Knowing which extra-early variety could still finish the season was the difference between a harvest and starting again.',
+      'The rains came three weeks late. Knowing which extra early variety could still finish the season was the difference between a harvest and starting again.',
   },
   {
     id: 'illustrative-2',

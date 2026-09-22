@@ -12,17 +12,17 @@ import { brand } from '@/core/content/brand';
 const AGRONOMIST_BENEFITS = [
   {
     title: 'Confirm or correct the shortlist',
-    body: 'The ranking is built from zone-level assumptions. An agronomist who knows the district can tell a farmer where those assumptions do not hold.',
+    body: 'The ranking is built from zone level assumptions. An agronomist who knows the district can tell a farmer where those assumptions do not hold.',
     benefit: 'Human judgement on local exceptions',
   },
   {
     title: 'Diagnose what a photograph cannot',
-    body: 'Soil chemistry, root damage, and several look-alike diseases need hands and sometimes a laboratory, not an image.',
+    body: 'Soil chemistry, root damage, and several lookalike diseases need hands and sometimes a laboratory, not an image.',
     benefit: 'Escalate what software cannot settle',
   },
   {
     title: 'Train in groups where possible',
-    body: 'Farmer field schools reach many more people per officer-day than individual visits, and farmers learn from each other in the process.',
+    body: 'Farmer field schools reach many more people per officer day than individual visits, and farmers learn from each other in the process.',
     benefit: 'More farms reached per advisory hour',
   },
 ];
@@ -31,7 +31,7 @@ const AGRONOMIST_STEPS = [
   {
     label: 'Step one',
     heading: 'Arrive with the basics settled',
-    body: 'A farmer who already has a shortlist of climate-fit varieties suited to their zone and soil starts the conversation much further along than one asking what to plant.',
+    body: 'A farmer who already has a shortlist of climate fit varieties suited to their zone and soil starts the conversation much further along than one asking what to plant.',
     slot: 'agronomist-field-demo' as const,
   },
   {
@@ -43,7 +43,7 @@ const AGRONOMIST_STEPS = [
   {
     label: 'Step three',
     heading: 'Train in groups where possible',
-    body: 'Farmer field schools reach many more people per officer-day than individual visits, and farmers learn a good deal from each other in the process.',
+    body: 'Farmer field schools reach many more people per officer day than individual visits, and farmers learn a good deal from each other in the process.',
     slot: 'agronomist-training' as const,
   },
 ];
@@ -55,10 +55,10 @@ export default function AgronomistNetworkPage() {
         asH1
         eyebrow="Agronomist Network"
         title="A model can rank varieties. It cannot walk a field."
-        description="Every CropX recommendation is a starting point for a conversation with someone who knows the district — so climate-fit seed choices become planting decisions farmers can trust."
+        description="Every CropX recommendation is a starting point for a conversation with someone who knows the district, so climate fit seed choices become planting decisions farmers can trust."
         visual={
           <Box style={{ position: 'relative', aspectRatio: '5 / 4' }}>
-            <ManagedImage slot="agronomist-hero-extension" fill sizes="(max-width: 768px) 100vw, 50vw" showCredit />
+            <ManagedImage slot="agronomist-hero-extension" fill sizes="(max-width: 768px) 100vw, 50vw" />
           </Box>
         }
       >
@@ -82,7 +82,7 @@ export default function AgronomistNetworkPage() {
             <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
               Research institutes have released the varieties. The difficulty is that the ratio of
               extension officers to farmers across much of the region means most farmers will
-              never have a technical conversation about seed choice in a given season — even when
+              never have a technical conversation about seed choice in a given season, even when
               food security depends on it.
             </Text>
             <Text c="dimmed" style={{ fontSize: 'var(--cropx-text-body-lg)', lineHeight: 1.75 }}>
@@ -113,13 +113,13 @@ export default function AgronomistNetworkPage() {
                   slot: 'agronomist-field-demo',
                   heading: 'Confirm or correct the shortlist',
                   caption:
-                    'The ranking is built from zone-level assumptions. An agronomist who knows the district can tell a farmer where those assumptions do not hold.',
+                    'The ranking is built from zone level assumptions. An agronomist who knows the district can tell a farmer where those assumptions do not hold.',
                 },
                 {
                   slot: 'agronomist-soil-test',
                   heading: 'Diagnose what a photograph cannot',
                   caption:
-                    'Soil chemistry, root damage, and several look-alike diseases need hands and sometimes a laboratory, not an image.',
+                    'Soil chemistry, root damage, and several lookalike diseases need hands and sometimes a laboratory, not an image.',
                 },
               ]}
             />
@@ -129,7 +129,7 @@ export default function AgronomistNetworkPage() {
               <Text c="dimmed" style={{ lineHeight: 1.75 }}>
                 If you advise farmers professionally, the parts of CropX likely to be useful are a
                 consistent zone reference, released variety details with breeder attribution, and
-                written reasoning for each suggestion — including the arguments against it.
+                written reasoning for each suggestion, including the arguments against it.
               </Text>
             </Stack>
           </Stack>

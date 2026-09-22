@@ -65,7 +65,7 @@ export const images: Record<ImageSlot, ManagedImage> = {
   },
   'home-before-drought-maize': {
     src: '/images/cropx/home-before-drought-maize.jpg',
-    alt: 'Maize plants stunted and browning after a prolonged mid-season dry spell',
+    alt: 'Maize plants stunted and browning after a prolonged mid season dry spell',
     width: 2000,
     height: 1328,
     credit: 'Neil Palmer / CIAT (CC BY-SA)',
@@ -110,7 +110,7 @@ export const images: Record<ImageSlot, ManagedImage> = {
   },
   'home-essay-harvest': {
     src: '/images/cropx/home-maize-harvest.jpg',
-    alt: 'CropX co-founder Oghenekevwe Emadago holding a freshly harvested ear of maize in a cornfield',
+    alt: 'CropX cofounder Idokoh Divine Ojochide holding a freshly harvested ear of maize in a cornfield',
     width: 2000,
     height: 2000,
     credit: null,
@@ -272,7 +272,7 @@ export const images: Record<ImageSlot, ManagedImage> = {
   },
   'agronomist-hero-extension': {
     src: '/images/cropx/agronomist-field-laptop.jpg',
-    alt: 'CropX co-founder Oghenekevwe Emadago examining maize with a laptop in a cornfield',
+    alt: 'CropX cofounder Idokoh Divine Ojochide examining maize with a laptop in a cornfield',
     width: 2000,
     height: 1500,
     credit: null,
@@ -344,7 +344,7 @@ export const images: Record<ImageSlot, ManagedImage> = {
   },
   'blog-drought-varieties': {
     src: '/images/cropx/blog-drought-varieties.jpg',
-    alt: 'A drought-tolerant crop standing in dry conditions',
+    alt: 'A drought tolerant crop standing in dry conditions',
     width: 1023,
     height: 680,
     credit: 'Macleay Grass Man (CC BY)',

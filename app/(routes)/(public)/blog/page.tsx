@@ -19,7 +19,7 @@ export default function BlogPage() {
         <Container size="xl" px={20}>
           <SectionHeader
             title="Field Notes"
-            description="Practical agronomy for food-security decisions: seed choice, soil, planting timing, and crop protection under a changing climate."
+            description="Practical agronomy for food security decisions: seed choice, soil, planting timing, and crop protection under a changing climate."
           />
         </Container>
       </Box>
@@ -36,7 +36,7 @@ export default function BlogPage() {
 
       <CtaBand
         title="Put the notes into practice"
-        description="Open the Seed Advisor for a climate-fit shortlist for your farm."
+        description="Open the Seed Advisor for a climate fit shortlist for your farm."
         buttonLabel={brand.ctaAdvisor}
       />
     </Box>

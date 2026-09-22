@@ -78,7 +78,7 @@ function buildRationale(
     rationale.push(`Released for the ${zoneLabel}, which is where ${profile.state} sits.`);
   } else if (parts.zone > 0) {
     rationale.push(
-      `Bred for a neighbouring zone rather than the ${zoneLabel} itself, so treat it as a second-choice option.`
+      `Bred for a neighbouring zone rather than the ${zoneLabel} itself, so treat it as a second choice option.`
     );
   } else {
     rationale.push(`Not bred for the ${zoneLabel}; included only because few alternatives matched.`);
@@ -93,9 +93,9 @@ function buildRationale(
   }
 
   if (variety.droughtToleranceScore >= 85) {
-    rationale.push('Among the most drought-resilient options for this crop.');
+    rationale.push('Among the most drought resilient options for this crop.');
   } else if (variety.droughtToleranceScore >= 70) {
-    rationale.push('Moderately drought-resilient; vulnerable to a long mid-season dry spell.');
+    rationale.push('Moderately drought resilient; vulnerable to a long mid season dry spell.');
   } else {
     rationale.push('Low drought resilience. Only sensible with assured water.');
   }

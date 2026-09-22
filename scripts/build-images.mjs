@@ -63,7 +63,7 @@ const SLOTS = {
   },
   'home-essay-harvest': {
     role: 'INLINE',
-    alt: 'CropX co-founder Oghenekevwe Emadago holding a freshly harvested ear of maize in a cornfield',
+    alt: 'CropX co-founder Idokoh Divine Ojochide holding a freshly harvested ear of maize in a cornfield',
   },
   'home-impact-market': {
     role: 'FULL_BLEED',
@@ -143,7 +143,7 @@ const SLOTS = {
   // ---------------------------------------------------- agronomist network
   'agronomist-hero-extension': {
     role: 'FULL_BLEED',
-    alt: 'CropX co-founder Oghenekevwe Emadago examining maize with a laptop in a cornfield',
+    alt: 'CropX co-founder Idokoh Divine Ojochide examining maize with a laptop in a cornfield',
   },
   'agronomist-training': {
     role: 'FULL_BLEED',
@@ -253,7 +253,7 @@ async function main() {
 
     console.log(
       `${slot.padEnd(30)} ${String(result.width).padStart(4)}x${String(result.height).padEnd(4)} ` +
-        `${(result.bytes / 1024).toFixed(0).padStart(4)}KB  (from ${result.originalWidth}px)`
+      `${(result.bytes / 1024).toFixed(0).padStart(4)}KB  (from ${result.originalWidth}px)`
     );
   }
 
@@ -277,14 +277,14 @@ export interface ManagedImage {
 
 export const images: Record<ImageSlot, ManagedImage> = {
 ${entries
-  .map((entry) => {
-    const { slot, config, result, credit } = entry;
-    const needsCredit = credit?.requiresAttribution ?? false;
-    const creditText = needsCredit
-      ? `${credit.creator} (${credit.licence})`.replace(/'/g, "\\'")
-      : null;
+      .map((entry) => {
+        const { slot, config, result, credit } = entry;
+        const needsCredit = credit?.requiresAttribution ?? false;
+        const creditText = needsCredit
+          ? `${credit.creator} (${credit.licence})`.replace(/'/g, "\\'")
+          : null;
 
-    return `  '${slot}': {
+        return `  '${slot}': {
     src: '/images/cropx/${slot}.jpg',
     alt: '${config.alt.replace(/'/g, "\\'")}',
     width: ${result.width},
@@ -293,8 +293,8 @@ ${entries
     creditUrl: ${credit?.sourceUrl ? `'${credit.sourceUrl}'` : 'null'},
     licence: ${credit?.licence ? `'${String(credit.licence).replace(/'/g, "\\'")}'` : 'null'},
   },`;
-  })
-  .join('\n')}
+      })
+      .join('\n')}
 };
 
 export function image(slot: ImageSlot): ManagedImage {
@@ -322,18 +322,18 @@ Sourced via [Openverse](https://openverse.org) and
 | File | Title | Creator | Licence | Source |
 | --- | --- | --- | --- | --- |
 ${entries
-  .map((entry) => {
-    const credit = entry.credit;
+      .map((entry) => {
+        const credit = entry.credit;
 
-    if (!credit) {
-      return `| \`${entry.slot}.jpg\` | — | — | unknown | — |`;
-    }
+        if (!credit) {
+          return `| \`${entry.slot}.jpg\` | — | — | unknown | — |`;
+        }
 
-    const source = credit.sourceUrl ? `[link](${credit.sourceUrl})` : '—';
+        const source = credit.sourceUrl ? `[link](${credit.sourceUrl})` : '—';
 
-    return `| \`${entry.slot}.jpg\` | ${credit.title} | ${credit.creator} | ${credit.licence} | ${source} |`;
-  })
-  .join('\n')}
+        return `| \`${entry.slot}.jpg\` | ${credit.title} | ${credit.creator} | ${credit.licence} | ${source} |`;
+      })
+      .join('\n')}
 
 ## Attribution requirements
 

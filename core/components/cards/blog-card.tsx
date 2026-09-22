@@ -29,7 +29,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
           slot={post.cover}
           fill
           sizes="(max-width: 768px) 100vw, 280px"
-          showCredit
+
         />
       </Box>
 

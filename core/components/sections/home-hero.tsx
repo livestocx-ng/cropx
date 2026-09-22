@@ -10,6 +10,7 @@ import {
 	Group,
 	Stack,
 	Text,
+	Image,
 } from '@mantine/core';
 import {IconArrowRight} from '@tabler/icons-react';
 import {AdvisorPreview} from '@/core/components/advisor/advisor-preview';
@@ -34,6 +35,7 @@ export function HomeHero() {
 			pt={{base: 40, md: 56}}
 			pb='var(--cropx-hero-py)'
 		>
+			
 			<video
 				autoPlay
 				muted
@@ -101,7 +103,7 @@ export function HomeHero() {
 									opacity: 0.95,
 								}}
 							>
-								Safeguarding food security through climate-fit
+								Safeguarding food security through climate fit
 								variety choice
 							</Text>
 
@@ -127,7 +129,7 @@ export function HomeHero() {
                   rightSection={<IconArrowRight size={18} />}
                   styles={{ root: { height: 48, fontWeight: 600, paddingInline: 22 } }}
                 >
-                  Get started — free
+                  Get started (free)
                 </Button>
                 <Button
                   component={Link}
