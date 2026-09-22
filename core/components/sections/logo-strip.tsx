@@ -1,16 +1,33 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Box, Container, Text } from '@mantine/core';
+import { Box } from '@mantine/core';
 import { Sponsors } from '@/core/utilities';
+import type { Sponsor } from '@/core/types';
 
 interface LogoStripProps {
   title?: string;
 }
 
+function shuffleSponsors(list: Sponsor[]): Sponsor[] {
+  const next = [...list];
+  for (let i = next.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [next[i], next[j]] = [next[j], next[i]];
+  }
+  return next;
+}
+
 /** Continuous partner marquee — Girlified “Supported & Backed By” pattern. */
 export function LogoStrip({ title = 'In the climate & agritech ecosystem' }: LogoStripProps) {
-  const loop = [...Sponsors, ...Sponsors];
+  const [sponsors, setSponsors] = useState(Sponsors);
+
+  useEffect(() => {
+    setSponsors(shuffleSponsors(Sponsors));
+  }, []);
+
+  const loop = [...sponsors, ...sponsors];
 
   return (
     <Box
@@ -23,11 +40,7 @@ export function LogoStrip({ title = 'In the climate & agritech ecosystem' }: Log
         overflow: 'hidden',
       }}
     >
-      {/* <Container size="xl" px={20} mb="md">
-        <Text size="sm" fw={600} c="dimmed" ta="center" style={{ letterSpacing: '-0.01em' }}>
-          {title}
-        </Text>
-      </Container> */}
+      {/* Title reserved: {title} */}
 
       <Box className="logo-marquee" style={{ position: 'relative' }}>
         <Box className="logo-marquee-track">
