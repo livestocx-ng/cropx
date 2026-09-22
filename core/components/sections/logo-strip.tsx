@@ -23,11 +23,11 @@ export function LogoStrip({ title = 'In the climate & agritech ecosystem' }: Log
         overflow: 'hidden',
       }}
     >
-      <Container size="xl" px={20} mb="md">
+      {/* <Container size="xl" px={20} mb="md">
         <Text size="sm" fw={600} c="dimmed" ta="center" style={{ letterSpacing: '-0.01em' }}>
           {title}
         </Text>
-      </Container>
+      </Container> */}
 
       <Box className="logo-marquee" style={{ position: 'relative' }}>
         <Box className="logo-marquee-track">
@@ -39,16 +39,16 @@ export function LogoStrip({ title = 'In the climate & agritech ecosystem' }: Log
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                paddingInline: 28,
-                height: 48,
+                paddingInline: 36,
+                height: 72,
               }}
             >
               <Image
                 src={sponsor.image}
                 alt={sponsor.name}
-                height={36}
-                width={120}
-                style={{ width: 'auto', maxWidth: 120, height: 36, objectFit: 'contain', opacity: 0.8 }}
+                height={56}
+                width={180}
+                style={{ width: 'auto', maxWidth: 180, height: 56, objectFit: 'contain', opacity: 0.85 }}
               />
             </Box>
           ))}
