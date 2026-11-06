@@ -294,17 +294,22 @@ export const Sponsors: Sponsor[] = [
 ];
 
 export const contactChannels = {
-  email: 'hello@cropx.africa',
+  email: 'cropx.support@livestocx.com',
   phone: '+234 810 859 7000',
+  social: {
+    facebook: 'https://www.facebook.com/livestocx',
+    linkedin: 'https://ng.linkedin.com/company/livestocxltd',
+    instagram: 'https://instagram.com/livestocx',
+  },
   offices: [
     {
       label: 'Abuja',
       lines: ['Shimex Estate', 'Lugbe FCT, Nigeria'],
     },
-    {
-      label: 'Asaba',
-      lines: ['Opposite Infant Jesus', 'Old Anwai Road, Asaba, Delta State'],
-    },
+    // {
+    //   label: 'Asaba',
+    //   lines: ['Opposite Infant Jesus', 'Old Anwai Road, Asaba, Delta State'],
+    // },
   ],
 };
 

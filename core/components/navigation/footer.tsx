@@ -1,5 +1,12 @@
 import Link from 'next/link';
-import { IconMail, IconMapPin, IconPhone } from '@tabler/icons-react';
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconMail,
+  IconMapPin,
+  IconPhone,
+} from '@tabler/icons-react';
 import {
   Anchor,
   Box,
@@ -29,6 +36,24 @@ export function Footer() {
             width: fit-content;
           }
           .footer-link:hover {
+            color: var(--mantine-color-white) !important;
+          }
+          .social-icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--mantine-color-white);
+            transition: all 0.25s ease;
+          }
+          .social-icon-btn:hover {
+            background: var(--mantine-color-primary-6);
+            border-color: var(--mantine-color-primary-6);
+            transform: translateY(-2px);
             color: var(--mantine-color-white) !important;
           }
         `}
@@ -68,7 +93,7 @@ export function Footer() {
 
             <GridCol span={{ base: 12, md: 8 }}>
               <Grid gutter={{ base: 'xl', md: 32 }}>
-                <GridCol span={{ base: 6, sm: 4 }}>
+                <GridCol span={{ base: 6, sm: 3 }}>
                   <FooterColumn title="Platform">
                     <Link href="/seed-advisor" className="footer-link">
                       Seed Advisor
@@ -85,7 +110,7 @@ export function Footer() {
                   </FooterColumn>
                 </GridCol>
 
-                <GridCol span={{ base: 6, sm: 4 }}>
+                <GridCol span={{ base: 6, sm: 3 }}>
                   <FooterColumn title="Company">
                     <Link href="/about-us" className="footer-link">
                       About
@@ -99,7 +124,7 @@ export function Footer() {
                   </FooterColumn>
                 </GridCol>
 
-                <GridCol span={{ base: 12, sm: 4 }}>
+                <GridCol span={{ base: 6, sm: 3 }}>
                   <FooterColumn title="Legal">
                     <Link href="/terms-of-service" className="footer-link">
                       Terms of Service
@@ -110,6 +135,40 @@ export function Footer() {
                     <Link href="/image-credits" className="footer-link">
                       Photo credits
                     </Link>
+                  </FooterColumn>
+                </GridCol>
+
+                <GridCol span={{ base: 6, sm: 3 }}>
+                  <FooterColumn title="Follow Us">
+                    <Group gap="xs">
+                      <a
+                        href={contactChannels.social.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icon-btn"
+                        aria-label="Facebook"
+                      >
+                        <IconBrandFacebook size={20} stroke={1.5} />
+                      </a>
+                      <a
+                        href={contactChannels.social.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icon-btn"
+                        aria-label="LinkedIn"
+                      >
+                        <IconBrandLinkedin size={20} stroke={1.5} />
+                      </a>
+                      <a
+                        href={contactChannels.social.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icon-btn"
+                        aria-label="Instagram"
+                      >
+                        <IconBrandInstagram size={20} stroke={1.5} />
+                      </a>
+                    </Group>
                   </FooterColumn>
                 </GridCol>
               </Grid>

@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Box } from '@mantine/core';
 import { Sponsors } from '@/core/utilities';
 import type { Sponsor } from '@/core/types';
+import { useEffect, useState } from 'react';
 
 interface LogoStripProps {
   title?: string;

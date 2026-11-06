@@ -13,11 +13,11 @@ export function BrandMark({ inverted = false, size = 34, showWordmark = true }: 
     <Group gap={10} wrap="nowrap" align="center">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/brand/cropx-mark.svg"
+        src="/brand/cropx-mark.jpg"
         alt=""
         width={size}
         height={size}
-        style={{ borderRadius: 8, flexShrink: 0, display: 'block' }}
+        style={{ borderRadius: 8, flexShrink: 0, display: 'block', border: '1px solid var(--cropx-border)' }}
       />
       {showWordmark && (
         <Text
